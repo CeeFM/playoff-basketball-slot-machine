@@ -15,3 +15,22 @@ code {
 img {
   border-radius: 20rem;
 }
+
+.player-img {
+  height: 3rem;
+}
+
+.player-container {
+  display: flex;
+  flex-flow: column wrap;
+  height: 85vh;
+  text-align: center;
+}
+
+.player-section {
+  border: 1px blac
+}
+
+.name {
+  font-size: .75rem;
+}

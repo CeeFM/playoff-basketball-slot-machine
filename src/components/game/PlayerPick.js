@@ -44,13 +44,11 @@ export const PlayerPick = () => {
                 })
             i++
         }
-        console.log(ranPlayerArray)
         return ranPlayerArray
 
    }
 
    const tenRanPlayers = tenRandomPlayers()
-   console.log(tenRanPlayers)
 
     // useEffect(
     //     () => {
@@ -76,7 +74,6 @@ export const PlayerPick = () => {
         fetch('http://localhost:8088/players')
             .then(response => response.json())
             .then((playerArray) => {
-                console.log(playerArray)
                 setPlayers(tenRanPlayers)
             })
     },
@@ -85,9 +82,10 @@ export const PlayerPick = () => {
 
     return <>
     <NavBar />
-
+    <div className="player-container">
     {
         players.map(player => <Player key={`player--${player.id}`} id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/>)
     }
+    </div>
     </>
 }
