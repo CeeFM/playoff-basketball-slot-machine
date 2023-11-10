@@ -87,7 +87,7 @@ export const PlayerPick = () => {
     <NavBar />
 
     {
-        players.map(player => <Player key={`player--${player.id}`} id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId}/>)
+        players.map(player => <Player key={`player--${player.id}`} id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/>)
     }
     </>
 }
