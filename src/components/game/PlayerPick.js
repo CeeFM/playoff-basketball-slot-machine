@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { NavBar } from "../nav/NavBar"
 import { useNavigate } from "react-router-dom"
 import { Player } from "./Player"
+import { ConfirmBtn } from "../nav/ConfirmBtn"
 
 export const PlayerPick = () => {   
     const randomNumber = () => {
@@ -155,7 +156,11 @@ export const PlayerPick = () => {
         }
 
     return <>
-    <NavBar />
+    {
+        userTeam.length % 5 === 0 && userTeam.length > 0
+        ? <ConfirmBtn />
+        : <NavBar />
+    }
     <div className="player-container">
     {
         players.map((player) => <>
