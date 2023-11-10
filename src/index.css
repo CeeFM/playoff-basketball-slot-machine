@@ -28,7 +28,8 @@ img {
 }
 
 .player-section {
-  border: 1px blac
+  border: 1px black dotted;
+  height: 12vh;
 }
 
 .name {
