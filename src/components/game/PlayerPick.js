@@ -50,6 +50,7 @@ export const PlayerPick = () => {
     const localBballUser = localStorage.getItem("bball_user")
     const bballUserObject = JSON.parse(localBballUser)
     const tenRanNums = tenRandomNumbers()
+    const team = userTeam.filter((player) => player.matchId === (match.length + 1))
 
    const tenRandomPlayers = () => {
         let i = 0
@@ -122,6 +123,8 @@ export const PlayerPick = () => {
 
 
     const returnPlayerDetails = (player) => {
+        getUserTeam()
+        getMatch()
         const localBballUser = localStorage.getItem("bball_user")
         const bballUserObject = JSON.parse(localBballUser)
             // TODO: Create the object to be saved to the API
@@ -131,7 +134,7 @@ export const PlayerPick = () => {
             }
     
             // TODO: Perform the fetch() to POST the object to the API
-            if (userTeam.length % 5 === 0 && userTeam.length > 0) {
+            if (team.length % 5 === 0 && team.length > 0) {
                 window.alert("No I'm sorry, you must remove a player from your team to add another one. You already have five!")
                 getUserTeam()
                 getMatch()
@@ -146,18 +149,14 @@ export const PlayerPick = () => {
             })
     
                 .then(response => response.json())
-                .then(console.log(userTeam))
                 .then(getUserTeam())
-                .then(console.log(userTeam))
-                .then(console.log(match))
                 .then(getMatch())
-                .then(console.log(match))
             }
         }
 
     return <>
     {
-        userTeam.length % 5 === 0 && userTeam.length > 0
+        team.length % 5 === 0 && team.length > 0
         ? <ConfirmBtn />
         : <NavBar />
     }
