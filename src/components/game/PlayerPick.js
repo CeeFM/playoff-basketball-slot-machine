@@ -27,6 +27,7 @@ export const PlayerPick = () => {
     }
 
     const [players, setPlayers] = useState([])
+    const [tenPlayers, setTenPlayers] = useState({})
     const navigate = useNavigate()
     const localBballUser = localStorage.getItem("bball_user")
     const bballUserObject = JSON.parse(localBballUser)
@@ -43,9 +44,14 @@ export const PlayerPick = () => {
                 })
             i++
         }
+        console.log(ranPlayerArray)
         return ranPlayerArray
+
    }
-    
+
+   const tenRanPlayers = tenRandomPlayers()
+   console.log(tenRanPlayers)
+
     // useEffect(
     //     () => {
     //         let ranNums = tenRandomNumbers()
@@ -70,7 +76,8 @@ export const PlayerPick = () => {
         fetch('http://localhost:8088/players')
             .then(response => response.json())
             .then((playerArray) => {
-                setPlayers(playerArray)
+                console.log(playerArray)
+                setPlayers(tenRanPlayers)
             })
     },
     []
