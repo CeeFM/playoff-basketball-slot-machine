@@ -66552,31 +66552,7 @@
     }
   ],
   "userTeam": [
-    {
-      "playerId": 180,
-      "matchId": 1,
-      "id": 1
-    },
-    {
-      "playerId": 149,
-      "matchId": 1,
-      "id": 2
-    },
-    {
-      "playerId": 133,
-      "matchId": 1,
-      "id": 3
-    },
-    {
-      "playerId": 43,
-      "matchId": 1,
-      "id": 4
-    },
-    {
-      "playerId": 130,
-      "matchId": 1,
-      "id": 5
-    }
+
   ],
   "match": [],
   "users": [
