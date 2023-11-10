@@ -66553,32 +66553,38 @@
   ],
   "userTeam": [
     {
-      "playerId": 13,
+      "playerId": 42,
       "matchId": 1,
       "id": 1
     },
     {
-      "playerId": 167,
+      "playerId": 178,
       "matchId": 1,
       "id": 2
     },
     {
-      "playerId": 64,
+      "playerId": 17,
       "matchId": 1,
       "id": 3
     },
     {
-      "playerId": 93,
+      "playerId": 8,
       "matchId": 1,
       "id": 4
     },
     {
-      "playerId": 47,
+      "playerId": 185,
       "matchId": 1,
       "id": 5
     }
   ],
-  "match": [],
+  "match": [
+    {
+      "userId": 2,
+      "matchId": 1,
+      "id": 1
+    }
+  ],
   "users": [
     {
       "id": 1,
