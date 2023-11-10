@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { NavBar } from "../nav/NavBar"
 import { useNavigate } from "react-router-dom"
+import { Player } from "./Player"
 
-export const PlayerPick = () => {
-
+export const PlayerPick = () => {   
     const randomNumber = () => {
         let number = Math.floor((Math.random() * 186) + 1)
         return number
@@ -26,43 +26,61 @@ export const PlayerPick = () => {
         return numArray
     }
 
-    const tenRandomPlayers = () => {
-        let ranNums = tenRandomNumbers()
-        let i = 0
-        let randomPlayers = []
-        while (i < 10) {
-            fetch(`http://localhost:8088/players/${ranNums[i]}`)
-                .then(response =>  response.json())
-                .then((playerArray) => {
-                    randomPlayers.push(playerArray)
-                })
-                .then(i++)
-        }
-        return randomPlayers
-    }
-
-    const initialPlayers = tenRandomPlayers()
-
-    const [players, setPlayers] = useState(initialPlayers)
+    const [players, setPlayers] = useState([])
     const navigate = useNavigate()
     const localBballUser = localStorage.getItem("bball_user")
     const bballUserObject = JSON.parse(localBballUser)
+    const tenRanNums = tenRandomNumbers()
 
-
+   const tenRandomPlayers = () => {
+        let i = 0
+        let ranPlayerArray = []
+        while (i < tenRanNums.length) {
+            fetch(`http://localhost:8088/players/${tenRanNums[i]}`)
+                .then(response => response.json())
+                .then((playerObject) => {
+                    ranPlayerArray.push(playerObject)
+                })
+            i++
+        }
+        return ranPlayerArray
+   }
+    
     // useEffect(
-    // () => {
-    //     fetch('http://localhost:8088/players')
-    //         .then(response => response.json())
-    //         .then((playerArray) => {
-    //             setPlayers(playerArray)
-    //         })
-    // },
-    // []
+    //     () => {
+    //         let ranNums = tenRandomNumbers()
+    //         let i = 0
+    //         let ranPlayers = []
+    //         while (i < 10) {
+    //             fetch(`http://localhost:8088/players/${ranNums[i]}`)
+    //                 .then(response =>  response.json())
+    //                 .then((playerArray) => {
+    //                     ranPlayers.push(playerArray)
+    //                 })
+    //                 .then(i++)
+    //                 .then(setPlayers(ranPlayers))
+    //         }
+    //     },
+    //     []
     // )
+
+
+    useEffect(
+    () => {
+        fetch('http://localhost:8088/players')
+            .then(response => response.json())
+            .then((playerArray) => {
+                setPlayers(playerArray)
+            })
+    },
+    []
+    )
 
     return <>
     <NavBar />
-   <button onClick={tenRandomPlayers}>Test That Shit Dude</button>
-   <button onClick={() => console.log(players)}>Test State</button>
+
+    {
+        players.map(player => <Player key={`player--${player.id}`} id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId}/>)
+    }
     </>
 }

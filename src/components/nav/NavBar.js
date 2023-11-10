@@ -10,9 +10,9 @@ export const NavBar = () => {
     {
         localStorage.getItem("bball_user")
             ? <li className="navbar__item navbar__logout">
-                <Link className="navbar__link" to="" onClick={() => {
+                <Link className="navbar__link" to="/" onClick={() => {
                     localStorage.removeItem("bball_user")
-                    navigate("/", {replace: true})
+                    navigate("/login", {replace: true})
                 }}><button className="btn btn-primary">Logout</button></Link>
             </li>
             : ""
