@@ -80,7 +80,7 @@ export const Player = ({ id, playerName, playerPic, playerExternalAPIId, playerO
 <br />
 <img className="player-img" src={playerPic} />
         <br />
-        <button onClick={returnPlayerDetails}>Select</button>
+        <button onClick={(clickEvent) => returnPlayerDetails(clickEvent)}>Select</button>
     </section>
     </>
 }

@@ -26,8 +26,25 @@ export const PlayerPick = () => {
         return numArray
     }
 
+    const getUserTeam = () => {
+        fetch('http://localhost:8088/userTeam')
+        .then(response => response.json())
+        .then((userTeamArray) => {
+            setUserTeam(userTeamArray)
+        })
+    }
+
+    const getMatch = () => {
+        fetch('http://localhost:8088/match')
+        .then(response => response.json())
+        .then((matchArray) => {
+            setMatch(matchArray)
+        })
+    }
+
     const [players, setPlayers] = useState([])
-    const [tenPlayers, setTenPlayers] = useState({})
+    const [match, setMatch] = useState([])
+    const [userTeam, setUserTeam] = useState([])
     const navigate = useNavigate()
     const localBballUser = localStorage.getItem("bball_user")
     const bballUserObject = JSON.parse(localBballUser)
@@ -80,11 +97,71 @@ export const PlayerPick = () => {
     []
     )
 
+    useEffect(
+        () => {
+            fetch('http://localhost:8088/match')
+                .then(response => response.json())
+                .then((matchArray) => {
+                    setMatch(matchArray)
+                })
+        },
+        []
+        )
+    
+        useEffect(
+        () => {
+            fetch('http://localhost:8088/userTeam')
+                .then(response => response.json())
+                .then((userTeamArray) => {
+                    setUserTeam(userTeamArray)
+                })
+        },
+        []
+        ) 
+
+
+    const returnPlayerDetails = (player) => {
+        const localBballUser = localStorage.getItem("bball_user")
+        const bballUserObject = JSON.parse(localBballUser)
+            // TODO: Create the object to be saved to the API
+            const playerToSendToAPI = {
+                playerId: parseInt(player),
+                matchId: match.length + 1
+            }
+    
+            // TODO: Perform the fetch() to POST the object to the API
+            if (userTeam.length % 5 === 0 && userTeam.length > 0) {
+                window.alert("No I'm sorry, you must remove a player from your team to add another one. You already have five!")
+                getUserTeam()
+                getMatch()
+            }
+              else {
+            return fetch(`http://localhost:8088/userTeam`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(playerToSendToAPI)
+            })
+    
+                .then(response => response.json())
+                .then(console.log(userTeam))
+                .then(getUserTeam())
+                .then(console.log(userTeam))
+                .then(console.log(match))
+                .then(getMatch())
+                .then(console.log(match))
+            }
+        }
+
     return <>
     <NavBar />
     <div className="player-container">
     {
-        players.map(player => <Player key={`player--${player.id}`} id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/>)
+        players.map((player) => <>
+        <Player 
+            key={`player--${player.id}`} 
+            id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> <button key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => returnPlayerDetails(clickEvent.target.id)}>Draft</button></>)
     }
     </div>
     </>
