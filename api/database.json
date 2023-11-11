@@ -66552,8 +66552,38 @@
     }
   ],
   "userTeam": [
+    {
+      "playerId": 186,
+      "matchId": 1,
+      "id": 1
+    },
+    {
+      "playerId": 151,
+      "matchId": 1,
+      "id": 2
+    },
+    {
+      "playerId": 15,
+      "matchId": 1,
+      "id": 3
+    },
+    {
+      "playerId": 95,
+      "matchId": 1,
+      "id": 4
+    },
+    {
+      "playerId": 136,
+      "matchId": 1,
+      "id": 5
+    }
   ],
   "match": [
+    {
+      "userId": 2,
+      "matchId": 1,
+      "id": 1
+    }
   ],
   "users": [
     {
@@ -66590,6 +66620,11 @@
       "email": "thisshitworks@me.com",
       "fullName": "this shit works",
       "id": 5
+    },
+    {
+      "email": "colin@me.com",
+      "fullName": "Colin",
+      "id": 6
     }
   ]
 }
