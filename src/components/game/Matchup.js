@@ -57,10 +57,11 @@ export const Matchup = () => {
         let gameurl = ``
         while (i < team.length){
             let thisPlayerGames = game.filter((gm) => gm.playerId === team[i]?.player.id)
-            let thisRandomNumber = Math.floor((Math.random() * thisPlayerGames.length) + 1)
+            let thisRandomNumber = Math.floor((Math.random() * thisPlayerGames.length))
             let playerGame = thisPlayerGames[thisRandomNumber]
             console.log(team)
             console.log(thisPlayerGames)
+            console.log(thisRandomNumber)
             console.log(playerGame?.externalAPIId)
                 if (i === team.length - 1){
                 playerurl += `${team[i]?.player?.externalAPIId}`
