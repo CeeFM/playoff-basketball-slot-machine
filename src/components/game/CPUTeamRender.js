@@ -21,7 +21,7 @@ export const CPUTeamRender = () => {
                     })
                 i++
             }
-            setCpuTeam(ranPlayerArray)
+            setCpuTeam(fiveRanPlays)
         },
         []
         ) 
@@ -63,9 +63,7 @@ export const CPUTeamRender = () => {
             return ranPlayerArray
     
        }
-    
-    console.log(cpuTeam)
-     const fiveRanPlayers = fiveRandomPlayers()
+    const fiveRanPlays = fiveRandomPlayers()
 
     return <>
     <div className="player-container">
