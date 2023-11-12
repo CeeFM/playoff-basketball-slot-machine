@@ -64,7 +64,7 @@ export const Matchup = () => {
             console.log(playerGame?.externalAPIId)
                 if (i === team.length - 1){
                 playerurl += `${team[i]?.player?.externalAPIId}`
-                gameurl += `$game_ids[]=${playerGame?.externalAPIId}`
+                gameurl += `&game_ids[]=${playerGame?.externalAPIId}`
             } 
                 else  {
                 playerurl += `${team[i]?.player?.externalAPIId}&player_ids[]=`
