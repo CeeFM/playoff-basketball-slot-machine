@@ -69,25 +69,6 @@ export const PlayerPick = () => {
 
    const tenRanPlayers = tenRandomPlayers()
 
-    // useEffect(
-    //     () => {
-    //         let ranNums = tenRandomNumbers()
-    //         let i = 0
-    //         let ranPlayers = []
-    //         while (i < 10) {
-    //             fetch(`http://localhost:8088/players/${ranNums[i]}`)
-    //                 .then(response =>  response.json())
-    //                 .then((playerArray) => {
-    //                     ranPlayers.push(playerArray)
-    //                 })
-    //                 .then(i++)
-    //                 .then(setPlayers(ranPlayers))
-    //         }
-    //     },
-    //     []
-    // )
-
-
     useEffect(
     () => {
         fetch('http://localhost:8088/players')

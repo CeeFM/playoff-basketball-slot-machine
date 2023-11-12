@@ -3,10 +3,7 @@ import { NavBar } from "../nav/NavBar"
 import { CPUPlayer } from "./CPUPlayer"
 
 export const CPUTeamRender = () => {
-    const [userTeam, setUserTeam] = useState([])
     const [cpuTeam, setCpuTeam] = useState([])
-    const [match, setMatch] = useState([])
-    const team = userTeam.filter((player) => player.matchId === (match.length + 1))
 
 
     useEffect(
@@ -64,7 +61,6 @@ export const CPUTeamRender = () => {
     
        }
     const fiveRanPlays = fiveRandomPlayers()
-
     return <>
     <div className="player-container">
         <h6>CPU TEAM</h6>
