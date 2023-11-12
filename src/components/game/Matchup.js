@@ -4,11 +4,13 @@ import { CPUTeamRender } from "./CPUTeamRender"
 
 export const Matchup = () => {
     const [userTeam, setUserTeam] = useState([])
-    const [cpuTeam, setCpuTeam] = useState([])
+    const [userStats, setUserStats] = useState([])
     const [match, setMatch] = useState([])
     const [game, setGame] = useState([])
     const team = userTeam.filter((player) => player.matchId === match.length)
 
+    console.log(userStats[0])
+//?.pts
 
     useEffect(
         () => {
@@ -48,9 +50,17 @@ export const Matchup = () => {
                 setUserTeam(userTeamArray)
             })
         }
+
+        const getGames = () => {
+            fetch('http://localhost:8088/games?_expand=player')
+            .then(response => response.json())
+            .then((gameArray) => {
+                setGame(gameArray)
+            })
+        }
     
     const statFinder = () => {
-
+        getUserTeam()
         let i = 0
         let url = "https://www.balldontlie.io/api/v1/stats?player_ids[]="
         let playerurl = ``
@@ -59,10 +69,6 @@ export const Matchup = () => {
             let thisPlayerGames = game.filter((gm) => gm.playerId === team[i]?.player.id)
             let thisRandomNumber = Math.floor((Math.random() * thisPlayerGames.length))
             let playerGame = thisPlayerGames[thisRandomNumber]
-            console.log(team)
-            console.log(thisPlayerGames)
-            console.log(thisRandomNumber)
-            console.log(playerGame?.externalAPIId)
                 if (i === team.length - 1){
                 playerurl += `${team[i]?.player?.externalAPIId}`
                 gameurl += `&game_ids[]=${playerGame?.externalAPIId}`
@@ -73,26 +79,69 @@ export const Matchup = () => {
             }
             i++
         }
-        console.log(playerurl)
-        console.log(gameurl)
         url += playerurl + gameurl
-        return url
+        console.log(url)
+        apiFetch(url)
     }
-//uncomment the console.log below to successfully print the dynamic api URL to the console, but throw an error the breaks everything else because it thinks "playerGame is not defined"?
- console.log(statFinder())
+
+    useEffect(
+        () => {
+            statFinder()
+        },
+        []
+        )
+
+    const apiFetch = (url) => {
+        fetch(`${url}`)
+            .then(response => response.json())
+            .then((statArray) => {
+                setUserStats(statArray?.data)
+        } )
+            .then(getUserTeam)
+            .then(getMatch)
+    }
+
+    let totalPoints = 0;
+
+    const findPlayer = (baller) => {
+        let foundPlayer = userStats.find((stat) => stat?.player?.id === baller?.player?.externalAPIId)
+        let dateString = foundPlayer?.game?.date
+            if (userStats.length > 1) {
+                let dateStringCopy = dateString
+                dateString = dateStringCopy.slice(0, 10)
+                totalPoints += parseInt(foundPlayer?.pts)
+                return <p className="player-stats">{dateString}
+                <br/ >
+                {foundPlayer?.pts} Points</p>}
+    }
+
+    // useEffect(
+    //     () => {
+    //         fetch(`${apiurl}`)
+    //             .then(response => response.json())
+    //             .then((statArray) => {
+    //                 console.log(statArray)
+    //                 setUserStats(statArray)
+    //             } )
+    //     },
+    //     []
+    //     )
 
     return <>
     <NavBar />
+    <button onClick={statFinder}>LET'S PLAY</button>
     <div className="player-container">
         <h6>YOUR TEAM</h6>
     {
         team.map((baller) => {
             return <>
-
             <section id={baller.id} className="player-section" key={baller?.player?.externalAPIId}>
-        <strong className="name">{baller?.player?.name}</strong> 
+        <strong className="name">{baller?.player?.name}</strong>
+        {findPlayer(baller)}
         <br />
-        <img className="player-img" src={baller?.player?.img} />
+        <div className="matchup-img-div">
+        <img className="matchup-img" src={baller?.player?.img} />
+        </div>
             </section>
             </>
         })
@@ -100,6 +149,7 @@ export const Matchup = () => {
     }
 
     <CPUTeamRender />
+    User Team Points: {totalPoints}
     </div>
     </>
 }

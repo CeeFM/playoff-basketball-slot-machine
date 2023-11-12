@@ -16,8 +16,13 @@ img {
   border-radius: 20rem;
 }
 
-.player-img {
+.player-img,
+.matchup-img {
   height: 3rem;
+}
+
+.matchup-img-div {
+  text-align: left;
 }
 
 .player-container {
@@ -34,4 +39,8 @@ img {
 
 .name {
   font-size: .75rem;
+}
+
+.player-stats {
+  font-size: 12px;
 }
