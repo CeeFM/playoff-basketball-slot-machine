@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import { NavBar } from "../nav/NavBar"
-import { Player } from "./Player"
+import { CPUTeamRender } from "./CPUTeamRender"
 
 export const Matchup = () => {
     const [userTeam, setUserTeam] = useState([])
+    const [cpuTeam, setCpuTeam] = useState([])
     const [match, setMatch] = useState([])
-    const team = userTeam.filter((player) => player.matchId === (match.length + 1))
+    const team = userTeam.filter((player) => player.matchId === match.length)
 
 
     useEffect(
@@ -15,16 +16,59 @@ export const Matchup = () => {
                 .then((userTeamArray) => {
                     setUserTeam(userTeamArray)
                 })
+                .then(getMatch())
         },
         []
         ) 
 
-    console.log(team)
+        const getMatch = () => {
+            fetch('http://localhost:8088/match')
+                .then(response => response.json())
+                .then((matchArray) => {
+                    setMatch(matchArray)
+                    })
+        }
+        // useEffect(
+        //     () => {
+        //         fetch('http://localhost:8088/match')
+        //             .then(response => response.json())
+        //             .then((matchArray) => {
+        //                 setMatch(matchArray)
+        //             })
+        //     },
+        //     []
+        //     ) 
+        const randomNumber = () => {
+            let number = Math.floor((Math.random() * 186) + 1)
+            return number
+        }
+    
+        const fiveRandomNumbers = () => {
+            let numArray = []
+            while (numArray.length < 5) {
+                let ranNum = randomNumber()
+                if(ranNum === 90) {
+                    ranNum = randomNumber()
+                } else if (numArray.includes(ranNum)) {
+                    ranNum = randomNumber()
+                }
+                else {
+                numArray.push(ranNum)
+                }
+            }
+    
+            return numArray
+        }
+        
+
     return <>
     <NavBar />
+    <div className="player-container">
+        <h6>YOUR TEAM</h6>
     {
         team.map((baller) => {
             return <>
+
             <section className="player-section" id={baller?.player?.externalAPIId}>
         <strong className="name">{baller?.player?.name}</strong> 
         <br />
@@ -32,7 +76,10 @@ export const Matchup = () => {
             </section>
             </>
         })
+        
     }
-    
+
+    <CPUTeamRender />
+    </div>
     </>
 }
