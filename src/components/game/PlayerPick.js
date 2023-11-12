@@ -73,7 +73,7 @@ export const PlayerPick = () => {
     () => {
         fetch('http://localhost:8088/players')
             .then(response => response.json())
-            .then((playerArray) => {
+            .then(() => {
                 setPlayers(tenRanPlayers)
             })
     },
@@ -146,7 +146,7 @@ export const PlayerPick = () => {
         players.map((player) => <>
         <Player 
             key={`player--${player.id}`} 
-            id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> <button key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => returnPlayerDetails(clickEvent.target.id)}>Draft</button></>)
+            id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> <button className="draft-btn" key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => returnPlayerDetails(clickEvent.target.id)}>Draft</button></>)
     }
     </div>
     </>

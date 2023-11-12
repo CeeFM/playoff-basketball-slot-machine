@@ -24,7 +24,7 @@ export const Matchup = () => {
 
         useEffect(
             () => {
-                fetch('http://localhost:8088/games')
+                fetch('http://localhost:8088/games?_expand=player')
                     .then(response => response.json())
                     .then((gameArray) => {
                         setGame(gameArray)
@@ -40,29 +40,45 @@ export const Matchup = () => {
                     setMatch(matchArray)
                     })
         }
+
+        const getUserTeam = () => {
+            fetch('http://localhost:8088/userTeam?_expand=player')
+            .then(response => response.json())
+            .then((userTeamArray) => {
+                setUserTeam(userTeamArray)
+            })
+        }
     
     const statFinder = () => {
+
         let i = 0
         let url = "https://www.balldontlie.io/api/v1/stats?player_ids[]="
+        let playerurl = ``
+        let gameurl = ``
         while (i < team.length){
-            let thisPlayerGames = game.filter((gm) => gm.playerId === team[i].id)
+            let thisPlayerGames = game.filter((gm) => gm.playerId === team[i]?.player.id)
             let thisRandomNumber = Math.floor((Math.random() * thisPlayerGames.length) + 1)
             let playerGame = thisPlayerGames[thisRandomNumber]
-            console.log(playerGame)
-            console.log(playerGame.externalAPIId)
+            console.log(team)
+            console.log(thisPlayerGames)
+            console.log(playerGame?.externalAPIId)
                 if (i === team.length - 1){
-                    url += `${team[i]?.player?.externalAPIId}&game_ids[]=${playerGame.externalAPIId}`
-                } 
-                    else  {
-                    url += `${team[i]?.player?.externalAPIId}&game_ids[]=${playerGame.externalAPIId}&player_ids[]=`  
-                }
+                playerurl += `${team[i]?.player?.externalAPIId}`
+                gameurl += `$game_ids[]=${playerGame?.externalAPIId}`
+            } 
+                else  {
+                playerurl += `${team[i]?.player?.externalAPIId}&player_ids[]=`
+                gameurl += `&game_ids[]=${playerGame?.externalAPIId}`  
+            }
             i++
         }
-
+        console.log(playerurl)
+        console.log(gameurl)
+        url += playerurl + gameurl
         return url
     }
 //uncomment the console.log below to successfully print the dynamic api URL to the console, but throw an error the breaks everything else because it thinks "playerGame is not defined"?
- //console.log(statFinder())
+ console.log(statFinder())
 
     return <>
     <NavBar />
