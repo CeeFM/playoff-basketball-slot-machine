@@ -148,6 +148,18 @@ export const CPUTeamRender = ({ userPoints }) => {
     
             }
 
+    const bigW = () => {
+        if (totalPoints > userPoints) {
+            return <h2>BIG L</h2>
+        }
+
+        else if (userPoints > totalPoints) {
+            return <h2>BIG W</h2>
+        } else {
+            return <h2>SOMETHING ELSE</h2>
+        }
+    }
+
     return <>
 
     <div className="player-container">
@@ -162,5 +174,6 @@ export const CPUTeamRender = ({ userPoints }) => {
     }
         CPU Team Score: {totalPoints}
     </div>
+    {bigW()}
     </>
 }
