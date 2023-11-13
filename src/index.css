@@ -23,6 +23,7 @@ img {
 
 .matchup-img-div {
   text-align: left;
+  display: none;
 }
 
 .player-container {
@@ -43,4 +44,9 @@ img {
 
 .player-stats {
   font-size: 12px;
+}
+
+.winorloss {
+  display: block;
+  text-align: center;
 }

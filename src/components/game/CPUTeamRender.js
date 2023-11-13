@@ -211,6 +211,8 @@ export const CPUTeamRender = ({ userPoints }) => {
     }
         CPU Team Score: {totalPoints}
     </div>
+    <div className="winorloss">
     {bigW()}
+    </div>
     </>
 }
