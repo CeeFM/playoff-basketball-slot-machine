@@ -66578,454 +66578,154 @@
       "id": 5
     },
     {
-      "playerId": 5,
+      "playerId": 186,
       "matchId": 2,
       "id": 6
     },
     {
-      "playerId": 2,
+      "playerId": 154,
       "matchId": 2,
       "id": 7
     },
     {
-      "playerId": 181,
+      "playerId": 47,
       "matchId": 2,
       "id": 8
     },
     {
-      "playerId": 148,
+      "playerId": 21,
       "matchId": 2,
       "id": 9
     },
     {
-      "playerId": 64,
+      "playerId": 83,
       "matchId": 2,
       "id": 10
     },
     {
-      "playerId": 148,
+      "playerId": 54,
       "matchId": 3,
       "id": 11
     },
     {
-      "playerId": 54,
+      "playerId": 52,
       "matchId": 3,
       "id": 12
     },
     {
-      "playerId": 128,
+      "playerId": 171,
       "matchId": 3,
       "id": 13
     },
     {
-      "playerId": 157,
+      "playerId": 124,
       "matchId": 3,
       "id": 14
     },
     {
-      "playerId": 47,
+      "playerId": 101,
       "matchId": 3,
       "id": 15
     },
     {
-      "playerId": 52,
+      "playerId": 157,
       "matchId": 4,
       "id": 16
     },
     {
-      "playerId": 173,
+      "playerId": 176,
       "matchId": 4,
       "id": 17
     },
     {
-      "playerId": 174,
+      "playerId": 36,
       "matchId": 4,
       "id": 18
     },
     {
-      "playerId": 1,
+      "playerId": 175,
       "matchId": 4,
       "id": 19
     },
     {
-      "playerId": 11,
+      "playerId": 167,
       "matchId": 4,
       "id": 20
     },
     {
-      "playerId": 147,
+      "playerId": 137,
       "matchId": 5,
       "id": 21
     },
     {
-      "playerId": 132,
+      "playerId": 139,
       "matchId": 5,
       "id": 22
     },
     {
-      "playerId": 178,
+      "playerId": 114,
       "matchId": 5,
       "id": 23
     },
     {
-      "playerId": 180,
+      "playerId": 159,
       "matchId": 5,
       "id": 24
     },
     {
-      "playerId": 140,
+      "playerId": 11,
       "matchId": 5,
       "id": 25
     },
     {
-      "playerId": 174,
+      "playerId": 173,
       "matchId": 6,
       "id": 26
     },
     {
-      "playerId": 100,
+      "playerId": 15,
       "matchId": 6,
       "id": 27
     },
     {
-      "playerId": 87,
+      "playerId": 110,
       "matchId": 6,
       "id": 28
     },
     {
-      "playerId": 180,
+      "playerId": 125,
       "matchId": 6,
       "id": 29
     },
     {
-      "playerId": 61,
+      "playerId": 145,
       "matchId": 6,
       "id": 30
     },
     {
-      "playerId": 74,
+      "playerId": 148,
       "matchId": 7,
       "id": 31
     },
     {
-      "playerId": 108,
+      "playerId": 7,
       "matchId": 7,
       "id": 32
     },
     {
-      "playerId": 45,
+      "playerId": 78,
       "matchId": 7,
       "id": 33
     },
     {
-      "playerId": 47,
+      "playerId": 162,
       "matchId": 7,
       "id": 34
     },
     {
-      "playerId": 103,
+      "playerId": 142,
       "matchId": 7,
       "id": 35
-    },
-    {
-      "playerId": 42,
-      "matchId": 8,
-      "id": 36
-    },
-    {
-      "playerId": 157,
-      "matchId": 8,
-      "id": 37
-    },
-    {
-      "playerId": 57,
-      "matchId": 8,
-      "id": 38
-    },
-    {
-      "playerId": 161,
-      "matchId": 8,
-      "id": 39
-    },
-    {
-      "playerId": 26,
-      "matchId": 8,
-      "id": 40
-    },
-    {
-      "playerId": 159,
-      "matchId": 9,
-      "id": 41
-    },
-    {
-      "playerId": 172,
-      "matchId": 9,
-      "id": 42
-    },
-    {
-      "playerId": 50,
-      "matchId": 9,
-      "id": 43
-    },
-    {
-      "playerId": 53,
-      "matchId": 9,
-      "id": 44
-    },
-    {
-      "playerId": 125,
-      "matchId": 9,
-      "id": 45
-    },
-    {
-      "playerId": 152,
-      "matchId": 10,
-      "id": 46
-    },
-    {
-      "playerId": 103,
-      "matchId": 10,
-      "id": 47
-    },
-    {
-      "playerId": 150,
-      "matchId": 10,
-      "id": 48
-    },
-    {
-      "playerId": 55,
-      "matchId": 10,
-      "id": 49
-    },
-    {
-      "playerId": 143,
-      "matchId": 10,
-      "id": 50
-    },
-    {
-      "playerId": 86,
-      "matchId": 11,
-      "id": 51
-    },
-    {
-      "playerId": 69,
-      "matchId": 11,
-      "id": 52
-    },
-    {
-      "playerId": 113,
-      "matchId": 11,
-      "id": 53
-    },
-    {
-      "playerId": 42,
-      "matchId": 11,
-      "id": 54
-    },
-    {
-      "playerId": 181,
-      "matchId": 11,
-      "id": 55
-    },
-    {
-      "playerId": 96,
-      "matchId": 12,
-      "id": 56
-    },
-    {
-      "playerId": 85,
-      "matchId": 12,
-      "id": 57
-    },
-    {
-      "playerId": 113,
-      "matchId": 12,
-      "id": 58
-    },
-    {
-      "playerId": 108,
-      "matchId": 12,
-      "id": 59
-    },
-    {
-      "playerId": 28,
-      "matchId": 12,
-      "id": 60
-    },
-    {
-      "playerId": 182,
-      "matchId": 13,
-      "id": 61
-    },
-    {
-      "playerId": 159,
-      "matchId": 13,
-      "id": 62
-    },
-    {
-      "playerId": 173,
-      "matchId": 13,
-      "id": 63
-    },
-    {
-      "playerId": 171,
-      "matchId": 13,
-      "id": 64
-    },
-    {
-      "playerId": 110,
-      "matchId": 13,
-      "id": 65
-    },
-    {
-      "playerId": 177,
-      "matchId": 14,
-      "id": 66
-    },
-    {
-      "playerId": 104,
-      "matchId": 14,
-      "id": 67
-    },
-    {
-      "playerId": 43,
-      "matchId": 14,
-      "id": 68
-    },
-    {
-      "playerId": 20,
-      "matchId": 14,
-      "id": 69
-    },
-    {
-      "playerId": 99,
-      "matchId": 14,
-      "id": 70
-    },
-    {
-      "playerId": 180,
-      "matchId": 15,
-      "id": 71
-    },
-    {
-      "playerId": 151,
-      "matchId": 15,
-      "id": 72
-    },
-    {
-      "playerId": 23,
-      "matchId": 15,
-      "id": 73
-    },
-    {
-      "playerId": 72,
-      "matchId": 15,
-      "id": 74
-    },
-    {
-      "playerId": 51,
-      "matchId": 15,
-      "id": 75
-    },
-    {
-      "playerId": 159,
-      "matchId": 16,
-      "id": 76
-    },
-    {
-      "playerId": 146,
-      "matchId": 16,
-      "id": 77
-    },
-    {
-      "playerId": 134,
-      "matchId": 16,
-      "id": 78
-    },
-    {
-      "playerId": 181,
-      "matchId": 16,
-      "id": 79
-    },
-    {
-      "playerId": 5,
-      "matchId": 16,
-      "id": 80
-    },
-    {
-      "playerId": 54,
-      "matchId": 17,
-      "id": 81
-    },
-    {
-      "playerId": 172,
-      "matchId": 17,
-      "id": 82
-    },
-    {
-      "playerId": 87,
-      "matchId": 17,
-      "id": 83
-    },
-    {
-      "playerId": 1,
-      "matchId": 17,
-      "id": 84
-    },
-    {
-      "playerId": 52,
-      "matchId": 17,
-      "id": 85
-    },
-    {
-      "playerId": 148,
-      "matchId": 18,
-      "id": 86
-    },
-    {
-      "playerId": 65,
-      "matchId": 18,
-      "id": 87
-    },
-    {
-      "playerId": 106,
-      "matchId": 18,
-      "id": 88
-    },
-    {
-      "playerId": 156,
-      "matchId": 18,
-      "id": 89
-    },
-    {
-      "playerId": 128,
-      "matchId": 18,
-      "id": 90
-    },
-    {
-      "playerId": 104,
-      "matchId": 19,
-      "id": 91
-    },
-    {
-      "playerId": 141,
-      "matchId": 19,
-      "id": 92
-    },
-    {
-      "playerId": 119,
-      "matchId": 19,
-      "id": 93
-    },
-    {
-      "playerId": 184,
-      "matchId": 19,
-      "id": 94
-    },
-    {
-      "playerId": 143,
-      "matchId": 19,
-      "id": 95
     }
   ],
   "match": [
@@ -67035,7 +66735,7 @@
       "id": 1
     },
     {
-      "userId": 6,
+      "userId": 2,
       "matchId": 2,
       "id": 2
     },
@@ -67045,7 +66745,7 @@
       "id": 3
     },
     {
-      "userId": 2,
+      "userId": 7,
       "matchId": 4,
       "id": 4
     },
@@ -67055,74 +66755,14 @@
       "id": 5
     },
     {
-      "userId": 8,
+      "userId": 6,
       "matchId": 6,
       "id": 6
     },
     {
-      "userId": 2,
+      "userId": 6,
       "matchId": 7,
       "id": 7
-    },
-    {
-      "userId": 2,
-      "matchId": 8,
-      "id": 8
-    },
-    {
-      "userId": 2,
-      "matchId": 9,
-      "id": 9
-    },
-    {
-      "userId": 2,
-      "matchId": 10,
-      "id": 10
-    },
-    {
-      "userId": 2,
-      "matchId": 11,
-      "id": 11
-    },
-    {
-      "userId": 6,
-      "matchId": 12,
-      "id": 12
-    },
-    {
-      "userId": 9,
-      "matchId": 13,
-      "id": 13
-    },
-    {
-      "userId": 10,
-      "matchId": 14,
-      "id": 14
-    },
-    {
-      "userId": 6,
-      "matchId": 15,
-      "id": 15
-    },
-    {
-      "userId": 11,
-      "matchId": 16,
-      "id": 16
-    },
-    {
-      "userId": 11,
-      "matchId": 17,
-      "id": 17
-    },
-    {
-      "userId": 2,
-      "matchId": 18,
-      "id": 18
-    },
-    {
-      "userId": 6,
-      "matchId": 19,
-      "id": 19
     }
   ],
   "users": [
@@ -67139,8 +66779,8 @@
       "name": "Absolute NOOB",
       "email": "absoluteNOOB@basketball.basketball",
       "username": "absoluteNOOB",
-      "wins": 4,
-      "losses": 10000000000004
+      "wins": 9,
+      "losses": 10000000000008
     },
     {
       "id": 3,
@@ -67170,16 +66810,16 @@
       "email": "colin@me.com",
       "fullName": "Colin",
       "username": "Cmoney",
-      "wins": 3,
-      "losses": 5,
+      "wins": 18,
+      "losses": 10,
       "id": 6
     },
     {
       "email": "testing@me.com",
       "fullName": "testing again",
       "username": "testingguy",
-      "wins": 0,
-      "losses": 0,
+      "wins": 4,
+      "losses": 7,
       "id": 7
     },
     {
