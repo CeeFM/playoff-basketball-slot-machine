@@ -6,6 +6,9 @@ export const CPUTeamRender = ({ userPoints }) => {
     const [cpuTeam, setCpuTeam] = useState([])
     const [game, setGame] = useState([])
     const [cpuTeamStats, setCpuTeamStats] = useState([])
+    const localBballUser = localStorage.getItem("bball_user")
+    const [users, setUsers] = useState([])
+    const bballUserObject = JSON.parse(localBballUser)
 
 
     useEffect(
@@ -24,6 +27,7 @@ export const CPUTeamRender = ({ userPoints }) => {
         },
         []
         ) 
+
         useEffect(
             () => {
                     fetch(`http://localhost:8088/games}`)
@@ -37,6 +41,18 @@ export const CPUTeamRender = ({ userPoints }) => {
             []
             ) 
 
+        useEffect(
+            () => {
+                    fetch(`http://localhost:8088/users`)
+                            .then(response => response.json())
+                            .then((userArray) => {
+                                setUsers(userArray)
+                            })
+                    }
+                    
+                ,
+                []
+                ) 
 
         const randomNumber = () => {
             let number = Math.floor((Math.random() * 186) + 1)
@@ -150,10 +166,30 @@ export const CPUTeamRender = ({ userPoints }) => {
 
     const bigW = () => {
         if (totalPoints > userPoints) {
+            fetch(`http://localhost:8088/users/${bballUserObject.id}`, {
+                method: 'PATCH',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify({
+                  losses: users[bballUserObject.id - 1].losses + 1  
+                }),
+
+            })
+                .then(response => response.json())
+                .then(data => console.log(data))
             return <h2>BIG L</h2>
         }
 
         else if (userPoints > totalPoints) {
+            fetch(`http://localhost:8088/users/${bballUserObject.id}`, {
+                method: 'PATCH',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify({
+                  wins: users[bballUserObject.id - 1].wins + 1  
+                }),
+
+            })
+                .then(response => response.json())
+                .then(data => console.log(data))
             return <h2>BIG W</h2>
         } else if (userPoints === totalPoints) {
             return <h2>BOOOOO TIE GAME?? REALLY??</h2>
@@ -163,7 +199,6 @@ export const CPUTeamRender = ({ userPoints }) => {
     }
 
     return <>
-
     <div className="player-container">
     <button onClick={statFinder}>CPU Team Test</button>
         <h6>CPU TEAM</h6>

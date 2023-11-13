@@ -5,7 +5,10 @@ import "./Login.css"
 export const Register = (props) => {
     const [customer, setCustomer] = useState({
         email: "",
-        fullName: ""
+        fullName: "",
+        wins: 0,
+        losses: 0,
+        username: ""
     })
     let navigate = useNavigate()
 
@@ -60,6 +63,12 @@ export const Register = (props) => {
                     <input onChange={updateCustomer}
                            type="text" id="fullName" className="form-control"
                            placeholder="Enter your name" required autoFocus />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="username"> Username </label>
+                    <input onChange={updateCustomer}
+                           type="text" id="username" className="form-control"
+                           placeholder="Enter a username" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="email"> Email address </label>

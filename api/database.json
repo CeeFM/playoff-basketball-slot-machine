@@ -66776,6 +66776,156 @@
       "playerId": 125,
       "matchId": 9,
       "id": 45
+    },
+    {
+      "playerId": 152,
+      "matchId": 10,
+      "id": 46
+    },
+    {
+      "playerId": 103,
+      "matchId": 10,
+      "id": 47
+    },
+    {
+      "playerId": 150,
+      "matchId": 10,
+      "id": 48
+    },
+    {
+      "playerId": 55,
+      "matchId": 10,
+      "id": 49
+    },
+    {
+      "playerId": 143,
+      "matchId": 10,
+      "id": 50
+    },
+    {
+      "playerId": 86,
+      "matchId": 11,
+      "id": 51
+    },
+    {
+      "playerId": 69,
+      "matchId": 11,
+      "id": 52
+    },
+    {
+      "playerId": 113,
+      "matchId": 11,
+      "id": 53
+    },
+    {
+      "playerId": 42,
+      "matchId": 11,
+      "id": 54
+    },
+    {
+      "playerId": 181,
+      "matchId": 11,
+      "id": 55
+    },
+    {
+      "playerId": 96,
+      "matchId": 12,
+      "id": 56
+    },
+    {
+      "playerId": 85,
+      "matchId": 12,
+      "id": 57
+    },
+    {
+      "playerId": 113,
+      "matchId": 12,
+      "id": 58
+    },
+    {
+      "playerId": 108,
+      "matchId": 12,
+      "id": 59
+    },
+    {
+      "playerId": 28,
+      "matchId": 12,
+      "id": 60
+    },
+    {
+      "playerId": 182,
+      "matchId": 13,
+      "id": 61
+    },
+    {
+      "playerId": 159,
+      "matchId": 13,
+      "id": 62
+    },
+    {
+      "playerId": 173,
+      "matchId": 13,
+      "id": 63
+    },
+    {
+      "playerId": 171,
+      "matchId": 13,
+      "id": 64
+    },
+    {
+      "playerId": 110,
+      "matchId": 13,
+      "id": 65
+    },
+    {
+      "playerId": 177,
+      "matchId": 14,
+      "id": 66
+    },
+    {
+      "playerId": 104,
+      "matchId": 14,
+      "id": 67
+    },
+    {
+      "playerId": 43,
+      "matchId": 14,
+      "id": 68
+    },
+    {
+      "playerId": 20,
+      "matchId": 14,
+      "id": 69
+    },
+    {
+      "playerId": 99,
+      "matchId": 14,
+      "id": 70
+    },
+    {
+      "playerId": 180,
+      "matchId": 15,
+      "id": 71
+    },
+    {
+      "playerId": 151,
+      "matchId": 15,
+      "id": 72
+    },
+    {
+      "playerId": 23,
+      "matchId": 15,
+      "id": 73
+    },
+    {
+      "playerId": 72,
+      "matchId": 15,
+      "id": 74
+    },
+    {
+      "playerId": 51,
+      "matchId": 15,
+      "id": 75
     }
   ],
   "match": [
@@ -66823,6 +66973,36 @@
       "userId": 2,
       "matchId": 9,
       "id": 9
+    },
+    {
+      "userId": 2,
+      "matchId": 10,
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "matchId": 11,
+      "id": 11
+    },
+    {
+      "userId": 6,
+      "matchId": 12,
+      "id": 12
+    },
+    {
+      "userId": 9,
+      "matchId": 13,
+      "id": 13
+    },
+    {
+      "userId": 10,
+      "matchId": 14,
+      "id": 14
+    },
+    {
+      "userId": 6,
+      "matchId": 15,
+      "id": 15
     }
   ],
   "users": [
@@ -66853,28 +67033,58 @@
     {
       "email": "newguyintown@me.com",
       "fullName": "New Guy In Town",
-      "isStaff": false,
+      "username": "NewGuy69420",
+      "wins": 0,
+      "losses": 0,
       "id": 4
     },
     {
       "email": "thisshitworks@me.com",
       "fullName": "this shit works",
+      "username": "thisshitworks",
+      "wins": 1,
+      "losses": 1,
       "id": 5
     },
     {
       "email": "colin@me.com",
       "fullName": "Colin",
+      "username": "Cmoney",
+      "wins": 1,
+      "losses": 4,
       "id": 6
     },
     {
       "email": "testing@me.com",
       "fullName": "testing again",
+      "username": "testingguy",
+      "wins": 0,
+      "losses": 0,
       "id": 7
     },
     {
       "email": "testingboi@me.com",
       "fullName": "testing man",
+      "username": "anothertestingguy",
+      "wins": 0,
+      "losses": 0,
       "id": 8
+    },
+    {
+      "email": "howitwork@me.com",
+      "fullName": "how it work with new ppl tho",
+      "username": "howitworktho",
+      "wins": 0,
+      "losses": 0,
+      "id": 9
+    },
+    {
+      "email": "colintesting@me.com",
+      "fullName": "Testing Colin Testing",
+      "wins": 0,
+      "losses": 0,
+      "username": "colintesting",
+      "id": 10
     }
   ]
 }
