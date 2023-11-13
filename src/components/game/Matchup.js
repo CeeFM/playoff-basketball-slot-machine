@@ -9,7 +9,6 @@ export const Matchup = () => {
     const [game, setGame] = useState([])
     const team = userTeam.filter((player) => player.matchId === match.length)
 
-    console.log(userStats[0])
 //?.pts
 
     useEffect(
@@ -98,7 +97,6 @@ export const Matchup = () => {
                 setUserStats(statArray?.data)
         } )
             .then(getUserTeam)
-            .then(getMatch)
     }
 
     let totalPoints = 0;
@@ -148,7 +146,7 @@ export const Matchup = () => {
         
     }
 
-    <CPUTeamRender />
+    <CPUTeamRender userPoints={totalPoints} />
     User Team Points: {totalPoints}
     </div>
     </>
