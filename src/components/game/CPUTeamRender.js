@@ -149,8 +149,9 @@ export const CPUTeamRender = ({ userPoints }) => {
             }
 
     return <>
-    <button onClick={statFinder}>CPU Team Test</button>
+
     <div className="player-container">
+    <button onClick={statFinder}>CPU Team Test</button>
         <h6>CPU TEAM</h6>
     {   
         cpuTeam.map((player) => <>
@@ -159,9 +160,7 @@ export const CPUTeamRender = ({ userPoints }) => {
             key={`player--${player.id}`} 
             id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player} findPlayer={findPlayer}/></>)
     }
-
-    CPU Team Score: {totalPoints}
-
+        CPU Team Score: {totalPoints}
     </div>
     </>
 }

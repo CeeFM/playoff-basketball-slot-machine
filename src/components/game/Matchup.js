@@ -127,8 +127,8 @@ export const Matchup = () => {
 
     return <>
     <NavBar />
-    <button onClick={statFinder}>LET'S PLAY</button>
     <div className="player-container">
+    <button onClick={statFinder}>LET'S PLAY</button>
         <h6>YOUR TEAM</h6>
     {
         team.map((baller) => {
@@ -145,9 +145,8 @@ export const Matchup = () => {
         })
         
     }
-
+        User Team Points: {totalPoints}
     <CPUTeamRender userPoints={totalPoints} />
-    User Team Points: {totalPoints}
     </div>
     </>
 }
