@@ -126,7 +126,7 @@ export const CPUTeamRender = ({ userPoints }) => {
         } )
     }
 
-    let totalPoints = 0;
+
 
     const calculateScore = (baller) => {
         let foundPlayer = cpuTeamStats.find((stat) => stat?.player?.id === baller?.externalAPIId)
@@ -135,7 +135,7 @@ export const CPUTeamRender = ({ userPoints }) => {
 
     
     
-
+        let totalPoints = 0;
     const findPlayer = (baller) => {
         let foundPlayer = cpuTeamStats.find((stat) => stat?.player?.id === baller?.externalAPIId)
         let dateString = foundPlayer?.game?.date
@@ -155,6 +155,8 @@ export const CPUTeamRender = ({ userPoints }) => {
 
         else if (userPoints > totalPoints) {
             return <h2>BIG W</h2>
+        } else if (userPoints === totalPoints) {
+            return <h2>BOOOOO TIE GAME?? REALLY??</h2>
         } else {
             return <h2>SOMETHING ELSE</h2>
         }
