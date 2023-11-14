@@ -37,8 +37,6 @@ export const Player = ({ id, playerName, playerPic, playerExternalAPIId, playerO
     }
     
     return <>
-    {console.log(team)}
-    {console.log(playerObject)}
     <section className="player-section" id={`player-${id}`}>
 <strong className="name">{playerName}</strong> 
 <br />
