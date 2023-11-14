@@ -200,7 +200,7 @@ export const CPUTeamRender = ({ userPoints }) => {
     return <>
     <div className="cpu-player-container">
         <div className="cpu-btn-container">
-    <button className="cpuStats" onClick={statFinder}>CPU Team Test</button>
+    <button className="cpuStats" onClick={statFinder}>THEN GET YOUR OPPONENT'S SCORES</button>
         </div>
         <h6>CPU TEAM</h6>
     {   

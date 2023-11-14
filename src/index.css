@@ -36,7 +36,8 @@ img {
 
 .player-section {
   border: 1px black dotted;
-  height: 11vh;
+  height: 13vh;
+  border-radius: 20px;
 }
 
 .name {
