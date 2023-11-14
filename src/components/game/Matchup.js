@@ -81,14 +81,19 @@ export const Matchup = () => {
         url += playerurl + gameurl
         console.log(url)
         apiFetch(url)
+        const userBtn = document.querySelector('.btn-container')
+        const cpuDiv = document.querySelector(".cpu-player-container")
+        const cpuBtn = document.querySelector(".cpu-btn-container")
+        cpuDiv.style.display = "block";
+        userBtn.style.display = "none"
     }
 
-    useEffect(
-        () => {
-            statFinder()
-        },
-        []
-        )
+    // useEffect(
+    //     () => {
+    //         statFinder()
+    //     },
+    //     []
+    //     )
 
     const apiFetch = (url) => {
         fetch(`${url}`)

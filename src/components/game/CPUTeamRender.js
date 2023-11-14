@@ -125,14 +125,18 @@ export const CPUTeamRender = ({ userPoints }) => {
         url += playerurl + gameurl
         console.log(url)
         apiFetch(url)
+        const userBtn = document.querySelector('.btn-container')
+        const cpuDiv = document.querySelector(".cpu-player-container")
+        const cpuBtn = document.querySelector(".cpu-btn-container")
+        cpuBtn.style.display = "none"
     }
 
-    useEffect(
-        () => {
-            statFinder()
-        },
-        []
-        )
+    // useEffect(
+    //     () => {
+    //         statFinder()
+    //     },
+    //     []
+    //     )
 
     const apiFetch = (url) => {
         fetch(`${url}`)

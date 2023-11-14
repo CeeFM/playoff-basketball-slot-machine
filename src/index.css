@@ -75,3 +75,7 @@ img {
   font-weight: bold;
   color: rgb(0, 75, 0)
 }
+
+.cpu-player-container {
+  display: none;
+}
