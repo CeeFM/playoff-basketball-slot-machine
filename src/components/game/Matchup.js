@@ -147,7 +147,7 @@ export const Matchup = () => {
         })
         
     }
-        User Team Points: {totalPoints}
+    <div className="user-score">User Team Points: {totalPoints}</div>
     <CPUTeamRender userPoints={totalPoints} />
     </div>
     </>

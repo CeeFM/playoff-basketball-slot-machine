@@ -41,7 +41,7 @@ export const Player = ({ id, playerName, playerPic, playerExternalAPIId, playerO
 <strong className="name">{playerName}</strong> 
 <br />
 <img className="player-img" src={playerPic} />
-    <button className={`remove-btn remove-${id}`}>Remove</button>
+    <div className="remove"><button className={`remove-btn remove-${id}`}>Remove</button></div>
     </section>
     </>
 }

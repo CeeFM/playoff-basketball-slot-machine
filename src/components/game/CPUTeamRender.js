@@ -210,7 +210,7 @@ export const CPUTeamRender = ({ userPoints }) => {
             key={`player--${player.id}`} 
             id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player} findPlayer={findPlayer}/></>)
     }
-        CPU Team Score: {totalPoints}
+        <div className="cpu-score">CPU Team Score: {totalPoints}</div>
     </div>
     <div className="winorloss">
     {bigW()}

@@ -50,12 +50,27 @@ img {
 .winorloss {
   display: block;
   text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: rgb(159, 0, 0)
 }
 
 .remove-btn {
   display: none;
 }
 
+.remove {
+  text-align: center;
+}
+
 .btn-container {
   display: block;
+}
+
+.user-score,
+.cpu-score {
+  font-weight: bold;
+  color: rgb(0, 75, 0)
 }
