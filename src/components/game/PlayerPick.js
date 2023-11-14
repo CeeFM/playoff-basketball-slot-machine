@@ -104,16 +104,18 @@ export const PlayerPick = () => {
 
 
     const returnPlayerDetails = (player) => {
+        console.log(player)
         getUserTeam()
         getMatch()
         const localBballUser = localStorage.getItem("bball_user")
         const bballUserObject = JSON.parse(localBballUser)
+        const parentDiv = document.querySelector(`.draft-${player}`)
+        const removeDiv = document.querySelector(`.remove-${player}`)
             // TODO: Create the object to be saved to the API
             const playerToSendToAPI = {
                 playerId: parseInt(player),
                 matchId: match.length + 1
             }
-    
             // TODO: Perform the fetch() to POST the object to the API
             if (team.length % 5 === 0 && team.length > 0) {
                 window.alert("No I'm sorry, you must remove a player from your team to add another one. You already have five!")
@@ -132,9 +134,12 @@ export const PlayerPick = () => {
                 .then(response => response.json())
                 .then(getUserTeam())
                 .then(getMatch())
+                .then(parentDiv.style.display = "none")
+                .then(removeDiv.style.display = "block")
             }
         }
 
+    
     return <>
     {
         team.length % 5 === 0 && team.length > 0
@@ -146,7 +151,7 @@ export const PlayerPick = () => {
         players.map((player) => <>
         <Player 
             key={`player--${player.id}`} 
-            id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> <button className="draft-btn" key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => returnPlayerDetails(clickEvent.target.id)}>Draft</button></>)
+            id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> <div className={`draft-${player.id}`}><button className={`draft-btn`} key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => returnPlayerDetails(clickEvent.target.id)}>Draft</button></div></>)
     }
     </div>
     </>

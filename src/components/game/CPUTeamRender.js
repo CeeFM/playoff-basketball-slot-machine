@@ -30,7 +30,7 @@ export const CPUTeamRender = ({ userPoints }) => {
 
         useEffect(
             () => {
-                    fetch(`http://localhost:8088/games}`)
+                    fetch(`http://localhost:8088/games`)
                         .then(response => response.json())
                         .then((gameArray) => {
                             setGame(gameArray)
@@ -194,13 +194,14 @@ export const CPUTeamRender = ({ userPoints }) => {
         } else if (userPoints === totalPoints) {
             return <h2>BOOOOO TIE GAME?? REALLY??</h2>
         } else {
-            return <h2>SOMETHING ELSE</h2>
-        }
+            return ""
     }
-
+    }
     return <>
-    <div className="player-container">
-    <button onClick={statFinder}>CPU Team Test</button>
+    <div className="cpu-player-container">
+        <div className="cpu-btn-container">
+    <button className="cpuStats" onClick={statFinder}>CPU Team Test</button>
+        </div>
         <h6>CPU TEAM</h6>
     {   
         cpuTeam.map((player) => <>

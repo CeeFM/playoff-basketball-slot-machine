@@ -6,7 +6,7 @@ export const Player = ({ id, playerName, playerPic, playerExternalAPIId, playerO
     const [userTeam, setUserTeam] = useState([])
     const [match, setMatch] = useState([])
     const navigate = useNavigate()
-
+    const team = userTeam.filter((player) => player.matchId === (match.length + 1))
 
     useEffect(
         () => {
@@ -15,6 +15,7 @@ export const Player = ({ id, playerName, playerPic, playerExternalAPIId, playerO
                 .then((userTeamArray) => {
                     setUserTeam(userTeamArray)
                 })
+                .then(getMatch)
         },
         []
         )
@@ -36,10 +37,13 @@ export const Player = ({ id, playerName, playerPic, playerExternalAPIId, playerO
     }
     
     return <>
-    <section className="player-section" id={playerExternalAPIId}>
+    {console.log(team)}
+    {console.log(playerObject)}
+    <section className="player-section" id={`player-${id}`}>
 <strong className="name">{playerName}</strong> 
 <br />
 <img className="player-img" src={playerPic} />
+    <button className={`remove-btn remove-${id}`}>Remove</button>
     </section>
     </>
 }

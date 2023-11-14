@@ -26,7 +26,8 @@ img {
   display: none;
 }
 
-.player-container {
+.player-container,
+.cpu-player-container {
   display: flex;
   flex-flow: column wrap;
   height: 85vh;
@@ -49,4 +50,12 @@ img {
 .winorloss {
   display: block;
   text-align: center;
+}
+
+.remove-btn {
+  display: none;
+}
+
+.btn-container {
+  display: block;
 }

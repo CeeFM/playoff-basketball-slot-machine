@@ -128,7 +128,9 @@ export const Matchup = () => {
     return <>
     <NavBar />
     <div className="player-container">
-    <button onClick={statFinder}>LET'S PLAY</button>
+        <div className="btn-container">
+            <button className="userStats" onClick={statFinder}>LET'S PLAY</button>
+        </div>
         <h6>YOUR TEAM</h6>
     {
         team.map((baller) => {
