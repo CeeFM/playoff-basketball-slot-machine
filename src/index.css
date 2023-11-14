@@ -60,6 +60,10 @@ img {
   font-size: 3rem;
 }
 
+.winorloss p {
+  color: white;
+}
+
 .remove-btn {
   display: none;
 }

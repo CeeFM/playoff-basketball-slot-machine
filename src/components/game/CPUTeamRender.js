@@ -196,7 +196,7 @@ export const CPUTeamRender = ({ userPoints }) => {
                 .then(data => console.log(data))
             return <h2>BIG W</h2>
         } else if (userPoints === totalPoints) {
-            return <h2>BOOOOO TIE GAME?? REALLY??</h2>
+            return <p>TIE - NO POINTS</p>
         } else {
             return ""
     }
