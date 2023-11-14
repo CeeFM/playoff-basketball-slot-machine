@@ -66976,6 +66976,106 @@
       "playerId": 87,
       "matchId": 17,
       "id": 85
+    },
+    {
+      "playerId": 142,
+      "matchId": 18,
+      "id": 86
+    },
+    {
+      "playerId": 7,
+      "matchId": 18,
+      "id": 87
+    },
+    {
+      "playerId": 174,
+      "matchId": 18,
+      "id": 88
+    },
+    {
+      "playerId": 154,
+      "matchId": 18,
+      "id": 89
+    },
+    {
+      "playerId": 185,
+      "matchId": 18,
+      "id": 90
+    },
+    {
+      "playerId": 80,
+      "matchId": 19,
+      "id": 91
+    },
+    {
+      "playerId": 78,
+      "matchId": 19,
+      "id": 92
+    },
+    {
+      "playerId": 77,
+      "matchId": 19,
+      "id": 93
+    },
+    {
+      "playerId": 185,
+      "matchId": 19,
+      "id": 94
+    },
+    {
+      "playerId": 120,
+      "matchId": 19,
+      "id": 95
+    },
+    {
+      "playerId": 4,
+      "matchId": 20,
+      "id": 96
+    },
+    {
+      "playerId": 74,
+      "matchId": 20,
+      "id": 97
+    },
+    {
+      "playerId": 9,
+      "matchId": 20,
+      "id": 98
+    },
+    {
+      "playerId": 109,
+      "matchId": 20,
+      "id": 99
+    },
+    {
+      "playerId": 167,
+      "matchId": 20,
+      "id": 100
+    },
+    {
+      "playerId": 114,
+      "matchId": 21,
+      "id": 101
+    },
+    {
+      "playerId": 92,
+      "matchId": 21,
+      "id": 102
+    },
+    {
+      "playerId": 174,
+      "matchId": 21,
+      "id": 103
+    },
+    {
+      "playerId": 41,
+      "matchId": 21,
+      "id": 104
+    },
+    {
+      "playerId": 12,
+      "matchId": 21,
+      "id": 105
     }
   ],
   "match": [
@@ -67063,6 +67163,26 @@
       "userId": 2,
       "matchId": 17,
       "id": 17
+    },
+    {
+      "userId": 2,
+      "matchId": 18,
+      "id": 18
+    },
+    {
+      "userId": 6,
+      "matchId": 19,
+      "id": 19
+    },
+    {
+      "userId": 2,
+      "matchId": 20,
+      "id": 20
+    },
+    {
+      "userId": 6,
+      "matchId": 21,
+      "id": 21
     }
   ],
   "users": [
@@ -67079,8 +67199,8 @@
       "name": "Absolute NOOB",
       "email": "absoluteNOOB@basketball.basketball",
       "username": "absoluteNOOB",
-      "wins": 72,
-      "losses": 10000000000038
+      "wins": 77,
+      "losses": 10000000000044
     },
     {
       "id": 3,
@@ -67110,8 +67230,8 @@
       "email": "colin@me.com",
       "fullName": "Colin",
       "username": "Cmoney",
-      "wins": 11,
-      "losses": 12,
+      "wins": 14,
+      "losses": 17,
       "id": 6
     },
     {

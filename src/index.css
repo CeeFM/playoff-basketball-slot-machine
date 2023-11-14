@@ -54,8 +54,10 @@ img {
   position: absolute;
   left: 0;
   right: 0;
+  top: -2rem;
   margin: 0 auto;
-  color: rgb(159, 0, 0)
+  color: rgb(159, 0, 0);
+  font-size: 3rem;
 }
 
 .remove-btn {
