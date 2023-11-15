@@ -1,3 +1,5 @@
+//main page where User will pick their team of 5 players from a list of 10 randomly rendered players
+
 import { useEffect, useState } from "react"
 import { NavBar } from "../nav/NavBar"
 import { useNavigate } from "react-router-dom"
@@ -103,7 +105,7 @@ export const PlayerPick = () => {
         ) 
 
 
-    const returnPlayerDetails = (player) => {
+    const draftPlayer = (player) => {
         console.log(player)
         getUserTeam()
         getMatch()
@@ -140,7 +142,7 @@ export const PlayerPick = () => {
             }
         }
 
-        const selectPlayer = (id) => {
+        const removePlayer = (id) => {
             getUserTeam()
             const parentDiv = document.querySelector(`.draft-btn-${parseInt(id)}`)
             const removeDiv = document.querySelector(`.remove-btn-${parseInt(id)}`)
@@ -169,8 +171,8 @@ export const PlayerPick = () => {
         <Player 
             key={`player--${player.id}`} 
             id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> 
-            <div className={`draft-div`}><button className={`draft-btn draft-btn-${player.id}`} key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => returnPlayerDetails(clickEvent.target.id)}>Draft</button></div> 
-            <div className={`remove-div`}><button onClick={(clickEvent) => selectPlayer(clickEvent.target.id)} className={`remove-btn remove-btn-${player.id}`} id={player.id}>Remove</button></div>
+            <div className={`draft-div`}><button className={`draft-btn draft-btn-${player.id}`} key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => draftPlayer(clickEvent.target.id)}>Draft</button></div> 
+            <div className={`remove-div`}><button onClick={(clickEvent) => removePlayer(clickEvent.target.id)} className={`remove-btn remove-btn-${player.id}`} id={player.id}>Remove</button></div>
             </>)
     }
     </div>

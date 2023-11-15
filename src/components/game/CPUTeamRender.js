@@ -131,13 +131,6 @@ export const CPUTeamRender = ({ userPoints }) => {
         cpuBtn.style.display = "none"
     }
 
-    // useEffect(
-    //     () => {
-    //         statFinder()
-    //     },
-    //     []
-    //     )
-
     const apiFetch = (url) => {
         fetch(`${url}`)
             .then(response => response.json())
@@ -146,7 +139,7 @@ export const CPUTeamRender = ({ userPoints }) => {
         } )
     }
 
-
+    let totalPoints = 0;
 
     const calculateScore = (baller) => {
         let foundPlayer = cpuTeamStats.find((stat) => stat?.player?.id === baller?.externalAPIId)
@@ -155,7 +148,7 @@ export const CPUTeamRender = ({ userPoints }) => {
 
     
     
-        let totalPoints = 0;
+
     const findPlayer = (baller) => {
         let foundPlayer = cpuTeamStats.find((stat) => stat?.player?.id === baller?.externalAPIId)
         let dateString = foundPlayer?.game?.date

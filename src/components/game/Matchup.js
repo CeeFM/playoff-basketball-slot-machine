@@ -9,8 +9,6 @@ export const Matchup = () => {
     const [game, setGame] = useState([])
     const team = userTeam.filter((player) => player.matchId === match.length)
 
-//?.pts
-
     useEffect(
         () => {
             fetch('http://localhost:8088/userTeam?_expand=player')
@@ -88,13 +86,6 @@ export const Matchup = () => {
         userBtn.style.display = "none"
     }
 
-    // useEffect(
-    //     () => {
-    //         statFinder()
-    //     },
-    //     []
-    //     )
-
     const apiFetch = (url) => {
         fetch(`${url}`)
             .then(response => response.json())
@@ -117,18 +108,6 @@ export const Matchup = () => {
                 <br/ >
                 {foundPlayer?.pts} Points</p>}
     }
-
-    // useEffect(
-    //     () => {
-    //         fetch(`${apiurl}`)
-    //             .then(response => response.json())
-    //             .then((statArray) => {
-    //                 console.log(statArray)
-    //                 setUserStats(statArray)
-    //             } )
-    //     },
-    //     []
-    //     )
 
     return <>
         <NavBar />

@@ -1,3 +1,5 @@
+//Welcome Page Content - First Time Users (Returning User Welcome Page TBD)
+
 import { Link } from "react-router-dom"
 import logo from "../images/funnybball.jpg"
 
