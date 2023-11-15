@@ -7,6 +7,7 @@ import { ApplicationViews } from './components/views/ApplicationViews';
 import { Authorized } from './components/views/Authorized';
 import { PlayerPick } from './components/game/PlayerPick';
 import { Matchup } from './components/game/Matchup';
+import { PlayerSwap } from './components/game/PlayerSwap';
 
 export const App = () => {
 	return <Routes>
@@ -23,5 +24,6 @@ export const App = () => {
 		} />
     		<Route path="/draft" element={<PlayerPick />} />
 			<Route path="/matchup" element={<Matchup />} />
+			<Route path="/swap" element={<PlayerSwap />} />
 	</Routes>
 }

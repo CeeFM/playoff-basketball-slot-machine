@@ -73,8 +73,8 @@ export const PlayerPick = () => {
 
     useEffect(
     () => {
-        fetch('http://localhost:8088/players')
-            .then(response => response.json())
+        tenRandomPlayers()
+        fetch('http://localhost:8088/match')
             .then(() => {
                 setPlayers(tenRanPlayers)
             })
@@ -138,7 +138,7 @@ export const PlayerPick = () => {
                 .then(getUserTeam())
                 .then(getMatch())
                 .then(parentDiv.style.display = "none")
-                .then(removeDiv.style.display = "block")
+                .then(removeDiv.style.display = "inline")
             }
         }
 
@@ -154,7 +154,7 @@ export const PlayerPick = () => {
                 .then(() => {
                     getUserTeam()
                 })
-                .then(parentDiv.style.display = "block")
+                .then(parentDiv.style.display = "inline")
                 .then(removeDiv.style.display = "none")
         }
 

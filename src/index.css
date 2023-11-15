@@ -85,6 +85,18 @@ img {
   color: rgb(0, 75, 0)
 }
 
-.cpu-player-container {
+.cpu-player-container,
+.continue-btn-container {
   display: none;
+}
+
+.continue-btn-container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -2rem;
+  margin: 0 auto;
+  color: rgb(159, 0, 0);
+  font-size: 3rem;
 }

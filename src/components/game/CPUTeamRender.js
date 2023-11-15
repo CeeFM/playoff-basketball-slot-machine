@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { NavBar } from "../nav/NavBar"
 import { CPUPlayer } from "./CPUPlayer"
+import { Link } from "react-router-dom"
 
 export const CPUTeamRender = ({ userPoints }) => {
     const [cpuTeam, setCpuTeam] = useState([])
@@ -125,10 +126,10 @@ export const CPUTeamRender = ({ userPoints }) => {
         url += playerurl + gameurl
         console.log(url)
         apiFetch(url)
-        const userBtn = document.querySelector('.btn-container')
-        const cpuDiv = document.querySelector(".cpu-player-container")
         const cpuBtn = document.querySelector(".cpu-btn-container")
+        const continueBtn = document.querySelector(".continue-btn-container")
         cpuBtn.style.display = "none"
+        continueBtn.style.display = "block"
     }
 
     const apiFetch = (url) => {
@@ -212,5 +213,6 @@ export const CPUTeamRender = ({ userPoints }) => {
     <div className="winorloss">
     {bigW()}
     </div>
+    <Link to="/swap"><div className="continue-btn-container"><button>CONTINUE</button></div></Link>
     </>
 }
