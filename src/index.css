@@ -69,7 +69,9 @@ img {
   display: none;
 }
 
-.remove {
+.remove,
+.draft-div,
+.remove-div {
   text-align: center;
 }
 

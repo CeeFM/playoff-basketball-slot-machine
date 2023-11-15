@@ -35,12 +35,6 @@ export const Player = ({ id, playerName, playerPic, playerExternalAPIId, playerO
             setMatch(matchArray)
         })
     }
-
-
-
-    const removePlayer = () => {
-        getUserTeam()
-    }
     
     return <>
     <section className="player-section" id={`player-${id}`}>
