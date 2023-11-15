@@ -116,6 +116,7 @@ export const PlayerPick = () => {
                 playerId: parseInt(player),
                 matchId: match.length + 1
             }
+        getUserTeam()
             // TODO: Perform the fetch() to POST the object to the API
             if (team.length % 5 === 0 && team.length > 0) {
                 window.alert("No I'm sorry, you must remove a player from your team to add another one. You already have five!")

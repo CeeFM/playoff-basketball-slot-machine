@@ -131,7 +131,7 @@ export const Matchup = () => {
     //     )
 
     return <>
-    <NavBar />
+        <NavBar />
     <div className="player-container">
         <div className="btn-container">
             <button className="userStats" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>
@@ -155,5 +155,6 @@ export const Matchup = () => {
     <div className="user-score">User Team Points: {totalPoints}</div>
     <CPUTeamRender userPoints={totalPoints} />
     </div>
+
     </>
 }

@@ -35,13 +35,27 @@ export const Player = ({ id, playerName, playerPic, playerExternalAPIId, playerO
             setMatch(matchArray)
         })
     }
+
+    const selectPlayer = () => {
+        getUserTeam()
+        console.log(team)
+        console.log(playerName)
+        console.log(id)
+        console.log(playerObject)
+        const findPlayer = team.filter((player) => player.playerId === id)
+        console.log(findPlayer)
+    }
+
+    const removePlayer = () => {
+        getUserTeam()
+    }
     
     return <>
     <section className="player-section" id={`player-${id}`}>
 <strong className="name">{playerName}</strong> 
 <br />
 <img className="player-img" src={playerPic} />
-    <div className="remove"><button className={`remove-btn remove-${id}`}>Remove</button></div>
+    <div className="remove"><button onClick={selectPlayer} className={`remove-btn remove-${id}`}>Remove</button></div>
     </section>
     </>
 }
