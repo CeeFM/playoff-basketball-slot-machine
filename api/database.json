@@ -35534,6 +35534,81 @@
       "playerId": 24,
       "matchId": 68,
       "id": 341
+    },
+    {
+      "playerId": 142,
+      "matchId": 69,
+      "id": 342
+    },
+    {
+      "playerId": 179,
+      "matchId": 69,
+      "id": 343
+    },
+    {
+      "playerId": 160,
+      "matchId": 69,
+      "id": 344
+    },
+    {
+      "playerId": 15,
+      "matchId": 69,
+      "id": 345
+    },
+    {
+      "playerId": 127,
+      "matchId": 69,
+      "id": 346
+    },
+    {
+      "playerId": 87,
+      "matchId": 70,
+      "id": 347
+    },
+    {
+      "playerId": 118,
+      "matchId": 70,
+      "id": 349
+    },
+    {
+      "playerId": 108,
+      "matchId": 70,
+      "id": 350
+    },
+    {
+      "playerId": 47,
+      "matchId": 70,
+      "id": 351
+    },
+    {
+      "playerId": 180,
+      "matchId": 70,
+      "id": 352
+    },
+    {
+      "playerId": 141,
+      "matchId": 71,
+      "id": 353
+    },
+    {
+      "playerId": 172,
+      "matchId": 71,
+      "id": 354
+    },
+    {
+      "playerId": 2,
+      "matchId": 71,
+      "id": 355
+    },
+    {
+      "playerId": 20,
+      "matchId": 71,
+      "id": 356
+    },
+    {
+      "playerId": 40,
+      "matchId": 71,
+      "id": 357
     }
   ],
   "match": [
@@ -35876,6 +35951,21 @@
       "userId": 15,
       "matchId": 68,
       "id": 68
+    },
+    {
+      "userId": 15,
+      "matchId": 69,
+      "id": 69
+    },
+    {
+      "userId": 17,
+      "matchId": 70,
+      "id": 70
+    },
+    {
+      "userId": 18,
+      "matchId": 71,
+      "id": 71
     }
   ],
   "users": [
@@ -35994,8 +36084,8 @@
     {
       "email": "HT@me.com",
       "fullName": "Hannah Thompson",
-      "wins": 25,
-      "losses": 7,
+      "wins": 39,
+      "losses": 12,
       "username": "HanBananBeanTeamForReezySheezyForReezySheezy",
       "id": 15
     },
@@ -36011,7 +36101,7 @@
       "email": "sarah@generationwv.com",
       "fullName": "Sarah Tredway-Brooks",
       "wins": 17,
-      "losses": 5,
+      "losses": 7,
       "username": "Teacher",
       "id": 17
     },
@@ -36019,7 +36109,7 @@
       "email": "barry@generationwv.com",
       "fullName": "Barry Griffith",
       "wins": 7,
-      "losses": 7,
+      "losses": 9,
       "username": "TheKid",
       "id": 18
     }
