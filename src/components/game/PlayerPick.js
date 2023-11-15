@@ -109,8 +109,8 @@ export const PlayerPick = () => {
         getMatch()
         const localBballUser = localStorage.getItem("bball_user")
         const bballUserObject = JSON.parse(localBballUser)
-        const parentDiv = document.querySelector(`.draft-${player}`)
-        const removeDiv = document.querySelector(`.remove-${player}`)
+        const parentDiv = document.querySelector(`.draft-btn-${player}`)
+        const removeDiv = document.querySelector(`.remove-btn-${player}`)
             // TODO: Create the object to be saved to the API
             const playerToSendToAPI = {
                 playerId: parseInt(player),
@@ -140,6 +140,14 @@ export const PlayerPick = () => {
             }
         }
 
+        const selectPlayer = (id) => {
+            getUserTeam()
+            console.log(team)
+            console.log(id)
+            const removePlayer = team.filter((baller) => baller.playerId === parseInt(id))
+            console.log(removePlayer)
+        }
+
     
     return <>
     {
@@ -152,7 +160,10 @@ export const PlayerPick = () => {
         players.map((player) => <>
         <Player 
             key={`player--${player.id}`} 
-            id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> <div className={`draft-${player.id}`}><button className={`draft-btn`} key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => returnPlayerDetails(clickEvent.target.id)}>Draft</button></div></>)
+            id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> 
+            <div className={`draft-${player.id}`}><button className={`draft-btn draft-btn-${player.id}`} key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => returnPlayerDetails(clickEvent.target.id)}>Draft</button></div> 
+            <div className={`remove-${player.id}`}><button onClick={(clickEvent) => selectPlayer(clickEvent.target.id)} className={`remove-btn remove-btn-${player.id}`} id={player.id}>Remove</button></div>
+            </>)
     }
     </div>
     </>
