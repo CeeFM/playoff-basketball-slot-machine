@@ -198,7 +198,7 @@ export const CPUTeamRender = ({ userPoints }) => {
     return <>
     <div className="cpu-player-container">
         <div className="cpu-btn-container">
-    <button className="cpuStats" onClick={statFinder}>THEN GET YOUR OPPONENT'S SCORES</button>
+    <button className="cpuStats btn btn-primary" onClick={statFinder}>THEN GET YOUR OPPONENT'S SCORES</button>
         </div>
         <h6>CPU TEAM</h6>
     {   
@@ -210,9 +210,9 @@ export const CPUTeamRender = ({ userPoints }) => {
     }
         <div className="cpu-score">CPU Team Score: {totalPoints}</div>
     </div>
-    <div className="winorloss">
+    <div className="winorloss container-fluid">
     {bigW()}
     </div>
-    <Link to="/swap"><div className="continue-btn-container"><button>CONTINUE</button></div></Link>
+    <Link to="/swap"><div className="continue-btn-container"><button className="btn btn-primary">CONTINUE</button></div></Link>
     </>
 }

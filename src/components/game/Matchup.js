@@ -113,7 +113,7 @@ export const Matchup = () => {
         <NavBar />
     <div className="player-container">
         <div className="btn-container">
-            <button className="userStats" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>
+            <button className="userStats btn btn-primary" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>
         </div>
         <h6>YOUR TEAM</h6>
     {

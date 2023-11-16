@@ -86,14 +86,14 @@ export const PlayerSwap = () => {
         {
             baller.swap === true   
             ? <div className="swap-div" style={{display: "none"}}><button onClick={(clickEvent) => printId(clickEvent.target.id)} className={`swap-btn swap-btn-${baller.id}`} id={baller.id}>SWAP?</button></div>
-            : <div className="swap-div" style={{display: "inline"}}><button onClick={(clickEvent) => printId(clickEvent.target.id)} className={`swap-btn swap-btn-${baller.id}`} id={baller.id}>SWAP?</button></div>
+            : <div className="swap-div" style={{display: "inline"}}><button onClick={(clickEvent) => printId(clickEvent.target.id)} className={`swap-btn swap-btn-${baller.id} btn btn-primary`} id={baller.id}>SWAP?</button></div>
         }
             </section>
             </>
         })
         
     }
-    <Link to="/matchup"><div><button>CONTINUE</button></div></Link>
+    <Link to="/matchup"><div><button className="btn btn-primary btn-lg">CONTINUE</button></div></Link>
     </div>
 
     </>

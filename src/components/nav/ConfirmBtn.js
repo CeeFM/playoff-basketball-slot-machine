@@ -47,5 +47,5 @@ export const ConfirmBtn = () => {
             }    
 
 
-    return <Link to="/matchup"><button onClick={createMatch}>CONFIRM YOUR TEAM</button></Link>
+    return <div className="confirm-div"><Link to="/matchup"><button className="btn btn-primary" onClick={createMatch}>CONFIRM YOUR TEAM</button></Link></div>
 }
