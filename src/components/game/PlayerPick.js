@@ -171,8 +171,8 @@ export const PlayerPick = () => {
         <Player 
             key={`player--${player.id}`} 
             id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> 
-            <div className={`draft-div`}><button className={`draft-btn draft-btn-${player.id}`} key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => draftPlayer(clickEvent.target.id)}>Draft</button></div> 
-            <div className={`remove-div`}><button onClick={(clickEvent) => removePlayer(clickEvent.target.id)} className={`remove-btn remove-btn-${player.id}`} id={player.id}>Remove</button></div>
+        <div className={`draft-div`}><button className={`draft-btn draft-btn-${player.id}`} key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => draftPlayer(clickEvent.target.id)}>Draft</button></div> 
+        <div className={`remove-div`}><button onClick={(clickEvent) => removePlayer(clickEvent.target.id)} className={`remove-btn remove-btn-${player.id}`} id={player.id}>Remove</button></div>
             </>)
     }
     </div>
