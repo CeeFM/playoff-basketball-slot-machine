@@ -43,14 +43,14 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button type="submit" className="btn btn-primary">
                             Sign in
                         </button>
                     </fieldset>
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+                <Link to="/register"><button className="btn btn-primary register">Not a member yet?</button></Link>
             </section>
         </main>
     )

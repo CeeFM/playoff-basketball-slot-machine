@@ -8,7 +8,7 @@ import { ConfirmBtn } from "../nav/ConfirmBtn"
 
 export const PlayerPick = () => {   
     const randomNumber = () => {
-        let number = Math.floor((Math.random() * 186) + 1)
+        let number = Math.floor((Math.random() * 187) + 1)
         return number
     }
 
@@ -165,14 +165,14 @@ export const PlayerPick = () => {
         ? <ConfirmBtn />
         : <NavBar />
     }
-    <div className="player-container">
+    <div className="player-container container">
     {
         players.map((player) => <>
         <Player 
             key={`player--${player.id}`} 
             id={player.id} playerPic={player.img} playerName={player.name} playerExternalAPIId={player.externalAPIId} playerObject={player}/> 
-        <div className={`draft-div`}><button className={`draft-btn draft-btn-${player.id}`} key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => draftPlayer(clickEvent.target.id)}>Draft</button></div> 
-        <div className={`remove-div`}><button onClick={(clickEvent) => removePlayer(clickEvent.target.id)} className={`remove-btn remove-btn-${player.id}`} id={player.id}>Remove</button></div>
+        <div className={`draft-div`}><button className={`draft-btn draft-btn-${player.id} btn btn-primary`} key={`player-pick-${player.id}`} id={player.id} onClick={(clickEvent) => draftPlayer(clickEvent.target.id)}>Draft</button></div> 
+        <div className={`remove-div`}><button onClick={(clickEvent) => removePlayer(clickEvent.target.id)} className={`remove-btn remove-btn-${player.id} btn btn-primary`} id={player.id}>Remove</button></div>
             </>)
     }
     </div>

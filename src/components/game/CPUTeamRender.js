@@ -126,9 +126,9 @@ export const CPUTeamRender = ({ userPoints }) => {
         url += playerurl + gameurl
         console.log(url)
         apiFetch(url)
-        const cpuBtn = document.querySelector(".cpu-btn-container")
+        const cpuBtn = document.querySelector(".cpuStats")
         const continueBtn = document.querySelector(".continue-btn-container")
-        cpuBtn.style.display = "none"
+        cpuBtn.style.visibility = "hidden"
         continueBtn.style.display = "block"
     }
 
@@ -156,9 +156,9 @@ export const CPUTeamRender = ({ userPoints }) => {
             if (cpuTeamStats.length > 1) {
                 let dateStringCopy = dateString
                 dateString = dateStringCopy.slice(0, 10)
-                return <p className="player-stats">{dateString}
+                return <p className="player-stats"><em>{dateString}</em>
                 <br/ >
-                {foundPlayer?.pts} Points</p>}
+                <strong>{foundPlayer?.pts} Points</strong></p>}
     
             }
 
@@ -198,7 +198,7 @@ export const CPUTeamRender = ({ userPoints }) => {
     return <>
     <div className="cpu-player-container">
         <div className="cpu-btn-container">
-    <button className="cpuStats btn btn-primary" onClick={statFinder}>THEN GET YOUR OPPONENT'S SCORES</button>
+    <button className="cpuStats btn btn-primary btn-lg" onClick={statFinder}>THEN GET YOUR OPPONENT'S SCORES</button>
         </div>
         <h6>CPU TEAM</h6>
     {   
@@ -213,6 +213,6 @@ export const CPUTeamRender = ({ userPoints }) => {
     <div className="winorloss container-fluid">
     {bigW()}
     </div>
-    <Link to="/swap"><div className="continue-btn-container"><button className="btn btn-primary">CONTINUE</button></div></Link>
+    <Link to="/swap"><div className="continue-btn-container"><button className="continue-btn btn btn-primary btn-lg">CONTINUE</button></div></Link>
     </>
 }

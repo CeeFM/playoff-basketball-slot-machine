@@ -38,9 +38,11 @@ export const Player = ({ id, playerName, playerPic, playerExternalAPIId, playerO
     
     return <>
     <section className="player-section" id={`player-${id}`}>
+    <div className="player-pick-img">
+    <img className="player-img" src={playerPic} />
+    </div>
 <strong className="name">{playerName}</strong> 
 <br />
-<img className="player-img" src={playerPic} />
     </section>
     </>
 }

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #EFC88B;
 }
 
 code {
@@ -18,12 +19,23 @@ img {
 
 .player-img,
 .matchup-img {
-  height: 3rem;
+  height: 7rem;
+  position: absolute;
+  left: 0
+}
+
+.swap-img {
+  height: 7rem;
+}
+
+.cpu-player-img {
+  height: 7rem;
+  position: absolute;
+  right: 0;
 }
 
 .matchup-img-div {
-  text-align: left;
-  display: none;
+text-align: center;
 }
 
 .player-container,
@@ -34,11 +46,13 @@ img {
   text-align: center;
 }
 
-.player-section {
+.player-section,
+.player-swap {
   border: 1px black dotted;
   height: 13vh;
   border-radius: 20px;
   margin: 0 7rem;
+  background-color: #EEE5E9;
 }
 
 .name {
@@ -52,7 +66,12 @@ img {
 
 
 .winorloss p {
-  color: white;
+  color: #EFC88B;
+}
+
+.winorloss h2 {
+  font-weight: bold;
+  font-size: 5rem;
 }
 
 .remove-btn,
@@ -95,7 +114,6 @@ img {
   right: 0;
   top: 38rem;
   margin: 0 auto;
-  color: rgb(159, 0, 0);
   font-size: 3rem;
 }
 
@@ -104,7 +122,48 @@ img {
   position: absolute;
   left: 0;
   right: 0;
+  top: 12rem;
   margin: 0 auto;
-  color: rgb(159, 0, 0);
+  color: black;
   font-size: 10rem;
+}
+
+.btn,
+.btn-primary {
+  background-color: #CF5C36;
+  border: #CF5C36 solid;
+}
+
+.btn:hover,
+.btn-primary:hover {
+  background-color: #8b3e25;
+  border: #8b3e25 solid;
+}
+
+.remove-btn {
+  background-color: red;
+  border: red solid;
+}
+
+.remove-btn:hover {
+  background-color: rgb(154, 0, 0);
+  border: rgb(154, 0, 0) solid;
+}
+
+.userStats,
+.cpuStats {
+  margin-bottom: 1.5rem;
+}
+
+.register {
+  margin-top: 1rem;
+}
+
+.swap-div {
+  position: absolute;
+  right: 15rem;
+}
+
+.player-pick-img {
+  position: absolute;
 }

@@ -81,9 +81,10 @@ export const Matchup = () => {
         apiFetch(url)
         const userBtn = document.querySelector('.btn-container')
         const cpuDiv = document.querySelector(".cpu-player-container")
-        const cpuBtn = document.querySelector(".cpu-btn-container")
+        //const imgDiv = document.querySelectorAll(".matchup-img")
         cpuDiv.style.display = "block";
-        userBtn.style.display = "none"
+        userBtn.style.visibility = "hidden";
+        //imgDiv.style.display = "none";
     }
 
     const apiFetch = (url) => {
@@ -104,28 +105,32 @@ export const Matchup = () => {
                 let dateStringCopy = dateString
                 dateString = dateStringCopy.slice(0, 10)
                 totalPoints += parseInt(foundPlayer?.pts)
-                return <p className="player-stats">{dateString}
+                return <p className="player-stats"><em>{dateString}</em>
                 <br/ >
-                {foundPlayer?.pts} Points</p>}
+                <strong>{foundPlayer?.pts} Points</strong></p>}
     }
 
     return <>
         <NavBar />
-    <div className="player-container">
+    <div className="player-container container">
         <div className="btn-container">
-            <button className="userStats btn btn-primary" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>
+            <button className="userStats btn btn-primary btn-lg" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>
         </div>
         <h6>YOUR TEAM</h6>
     {
         team.map((baller) => {
             return <>
             <section id={baller.id} className="player-section" key={baller?.player?.externalAPIId}>
-        <strong className="name">{baller?.player?.name}</strong>
-        {findPlayer(baller)}
-        <br />
+        <div className="userScores">
         <div className="matchup-img-div">
         <img className="matchup-img" src={baller?.player?.img} />
         </div>
+        <strong className="name">{baller?.player?.name}</strong>
+        {findPlayer(baller)}
+        </div>
+        <br />
+
+
             </section>
             </>
         })

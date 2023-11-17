@@ -70,24 +70,24 @@ export const PlayerSwap = () => {
          
     return <>
             <NavBar />
-    <div className="player-container">
+    <div className="player-container container">
         <h4>SWAP A PLAYER ON YOUR TEAM (YOU CAN ONLY DO THIS ONCE), 
             <br/>OR KEEP THE SAME TEAM AND START ANOTHER BATTLE</h4>
     {
         team.map((baller) => {
             return <>
             {console.log(baller)}
-            <section id={baller.id} className="player-section" key={baller?.player?.externalAPIId}>
+            <section id={baller.id} className="player-swap" key={baller?.player?.externalAPIId}>
         <strong className="name">{baller?.player?.name}</strong>
         <br />
-        <div className="matchup-img-div">
-        <img className="matchup-img" src={baller?.player?.img} />
-        </div>
         {
             baller.swap === true   
             ? <div className="swap-div" style={{display: "none"}}><button onClick={(clickEvent) => printId(clickEvent.target.id)} className={`swap-btn swap-btn-${baller.id}`} id={baller.id}>SWAP?</button></div>
             : <div className="swap-div" style={{display: "inline"}}><button onClick={(clickEvent) => printId(clickEvent.target.id)} className={`swap-btn swap-btn-${baller.id} btn btn-primary`} id={baller.id}>SWAP?</button></div>
         }
+        <div className="swap-img-div">
+        <img className="swap-img" src={baller?.player?.img} />
+        </div>
             </section>
             </>
         })
