@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Allen Iverson",
-      "img": "http://res.cloudinary.com/ybmedia/image/upload/c_crop,h_1113,w_1979,x_11,y_0/c_fill,f_auto,h_900,q_auto,w_1600/v1/m/f/b/fbf42f2bf69a9869f5276e38bd1d849b46f4ce9b/allen-iverson-career-retrospective.jpg",
+      "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/947.png",
       "externalAPIId": 1037
     },
     {
@@ -21,7 +21,7 @@
     {
       "id": 4,
       "name": "Amar'e Stoudemire",
-      "img": "https://arizonasports.com/wp-content/uploads/2019/07/stoudemire.jpg",
+      "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/2405.png",
       "externalAPIId": 1433
     },
     {
@@ -33,13 +33,13 @@
     {
       "id": 6,
       "name": "Andre Miller",
-      "img": "https://a.espncdn.com/photo/2010/0428/nba_g_amiller_sy_576.jpg",
+      "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/1889.png",
       "externalAPIId": 1222
     },
     {
       "id": 7,
       "name": "Anfernee Hardaway",
-      "img": "https://cdn.vox-cdn.com/thumbor/W0QpdrpzcozFq-uOPQwgwkI4Jl8=/0x0:2400x3598/1820x1213/filters:focal(970x695:1354x1079):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69524513/56474457.jpg.0.jpg",
+      "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/358.png",
       "externalAPIId": 799
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": 9,
       "name": "Anthony Davis",
-      "img": "https://static01.nyt.com/images/2019/02/12/sports/12stein/merlin_150449823_e3d772b6-4db2-4eba-8875-8f0356db66be-superJumbo.jpg",
+      "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/203076.png",
       "externalAPIId": 117
     },
     {
@@ -75,7 +75,7 @@
     {
       "id": 13,
       "name": "Bam Adebayo",
-      "img": "https://cdn.nba.com/manage/2023/01/bam-adebayo-iso.jpg",
+      "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066261.png&w=350&h=254",
       "externalAPIId": 4
     },
     {
@@ -87,7 +87,7 @@
     {
       "id": 15,
       "name": "Ben Gordon",
-      "img": "https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2016%2F0801%2Fr109179_1296x729_16%2D9.jpg",
+      "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/2732.png",
       "externalAPIId": 1562
     },
     {
@@ -99,7 +99,7 @@
     {
       "id": 17,
       "name": "Bill Laimbeer",
-      "img": "https://nbcsports.brightspotcdn.com/dims4/default/c0ef0a6/2147483647/strip/true/crop/1013x570+0+0/resize/1440x810!/format/webp/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F83%2Fcd%2F78017b225ec9a6adfd365a50180c%2F73363588-e1495886299295.jpg",
+      "img": "https://scontent-iad3-1.xx.fbcdn.net/v/t1.6435-9/186515281_3055978114682375_4045739126378502035_n.jpg?stp=dst-jpg_s720x720&_nc_cat=107&ccb=1-7&_nc_sid=0bb214&_nc_ohc=Idoq4Rc01acAX_ijrps&_nc_ht=scontent-iad3-1.xx&oh=00_AfBeuMBNYB7tC8RvLfVznH8RrjDOtl2i-jyx3JNxedxsnA&oe=657F62A0",
       "externalAPIId": 533
     },
     {
@@ -693,7 +693,7 @@
     {
       "id": 117,
       "name": "Jason Richardson",
-      "img": "https://media.bleacherreport.com/w_800,h_533,c_fill/br-img-slides/004/049/104/hi-res-42cd4080a8ae9bf7d8c05a2166bc4e8e_crop_exact.jpg",
+      "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1018.png&w=350&h=254",
       "externalAPIId": 1372
     },
     {
@@ -747,7 +747,7 @@
     {
       "id": 126,
       "name": "Jerry Stackhouse",
-      "img": "https://uproxx.com/wp-content/uploads/2016/04/screen-shot-2016-04-12-at-10-41-05-am-e1460472114738.jpg",
+      "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/802.png&w=350&h=254",
       "externalAPIId": 946
     },
     {
@@ -789,19 +789,19 @@
     {
       "id": 133,
       "name": "John Havlicek",
-      "img": "https://assets3.cbsnewsstatic.com/hub/i/r/2011/09/23/e8fd4f71-f200-465f-8f06-99dfc3e577e7/thumbnail/1240x930/2c7226635468a86cd046343567a20f57/john-havlicek.jpg?v=5659e73acd91751548aa89950cf015b0",
+      "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/76970.png",
       "externalAPIId": 46400205
     },
     {
       "id": 134,
       "name": "John Starks",
-      "img": "https://www.giantbomb.com/a/uploads/scale_small/46/462814/3190214-5272926124-5eb32.png",
+      "img": "https://nypost.com/wp-content/uploads/sites/2/2022/12/queens-cell-tower-098.jpg?resize=1366,2048&quality=75&strip=all",
       "externalAPIId": 3049
     },
     {
       "id": 135,
       "name": "John Stockton",
-      "img": "https://cdn.nba.com/manage/2021/08/stockton-pass-081821.jpg",
+      "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/304.png",
       "externalAPIId": 2871
     },
     {
@@ -819,7 +819,7 @@
     {
       "id": 138,
       "name": "Karl Malone",
-      "img": "https://library.sportingnews.com/styles/crop_style_16_9_desktop_webp/s3/2021-10/karl-malone-040516-getty-ftrjpg_1w2o2iv1srikz1ilq6r4c14541.jpg.webp",
+      "img": "https://cdn.nba.com/headshots/nba/latest/1040x760/252.png",
       "externalAPIId": 583
     },
     {
@@ -867,7 +867,7 @@
     {
       "id": 146,
       "name": "Kiki Vandeweghe",
-      "img": "https://bobkuska.files.wordpress.com/2021/07/img_0780.jpg?w=700",
+      "img": "https://media.gettyimages.com/id/485556680/photo/los-angeles-clippers.jpg?s=1024x1024&w=gi&k=20&c=Z1hMXgym8oiqe_ODb7NFcbgn4NaVxsvg1AT76oy0UR8=",
       "externalAPIId": 2961
     },
     {
@@ -909,7 +909,7 @@
     {
       "id": 153,
       "name": "Latrell Sprewell",
-      "img": "https://www.famousafricanamericans.org/images/latrell-sprewell.jpg",
+      "img": "https://www.xwhos.com/photo/whois_latrell_sprewell_2019-02-25_0.webp",
       "externalAPIId": 750
     },
     {
@@ -1041,7 +1041,7 @@
     {
       "id": 175,
       "name": "Richard Hamilton",
-      "img": "https://cdn.vox-cdn.com/thumbor/8K7LWn0SqMKMJVPEyFFd29_gH1k=/0x0:3444x2296/1820x1213/filters:focal(1499x279:2049x829):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/53433175/85485417.0.jpg",
+      "img": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/294.png&w=350&h=254",
       "externalAPIId": 1245
     },
     {
@@ -36504,24 +36504,113 @@
       "id": 526
     },
     {
-      "playerId": 132,
+      "playerId": 27,
       "matchId": 105,
-      "id": 527
+      "id": 527,
+      "swap": true
     },
     {
-      "playerId": 54,
+      "playerId": 58,
       "matchId": 105,
-      "id": 528
+      "id": 528,
+      "swap": true
     },
     {
-      "playerId": 92,
+      "playerId": 143,
       "matchId": 105,
-      "id": 529
+      "id": 529,
+      "swap": true
     },
     {
       "playerId": 181,
       "matchId": 105,
       "id": 530,
+      "swap": true
+    },
+    {
+      "playerId": 133,
+      "matchId": 106,
+      "id": 531,
+      "swap": true
+    },
+    {
+      "playerId": 150,
+      "matchId": 106,
+      "id": 532,
+      "swap": true
+    },
+    {
+      "playerId": 123,
+      "matchId": 106,
+      "id": 533,
+      "swap": true
+    },
+    {
+      "playerId": 65,
+      "matchId": 106,
+      "id": 534,
+      "swap": true
+    },
+    {
+      "playerId": 85,
+      "matchId": 106,
+      "id": 535,
+      "swap": true
+    },
+    {
+      "playerId": 130,
+      "matchId": 107,
+      "id": 536,
+      "swap": true
+    },
+    {
+      "playerId": 120,
+      "matchId": 107,
+      "id": 537
+    },
+    {
+      "playerId": 144,
+      "matchId": 107,
+      "id": 538
+    },
+    {
+      "playerId": 26,
+      "matchId": 107,
+      "id": 539,
+      "swap": true
+    },
+    {
+      "playerId": 130,
+      "matchId": 107,
+      "id": 540,
+      "swap": true
+    },
+    {
+      "playerId": 30,
+      "matchId": 108,
+      "id": 541,
+      "swap": true
+    },
+    {
+      "playerId": 154,
+      "matchId": 108,
+      "id": 542
+    },
+    {
+      "playerId": 15,
+      "matchId": 108,
+      "id": 543
+    },
+    {
+      "playerId": 35,
+      "matchId": 108,
+      "id": 544,
+      "swap": true
+    },
+    {
+      "playerId": 64,
+      "matchId": 108,
+      "id": 545,
       "swap": true
     }
   ],
@@ -37050,6 +37139,21 @@
       "userId": 2,
       "matchId": 105,
       "id": 105
+    },
+    {
+      "userId": 6,
+      "matchId": 106,
+      "id": 106
+    },
+    {
+      "userId": 15,
+      "matchId": 107,
+      "id": 107
+    },
+    {
+      "userId": 16,
+      "matchId": 108,
+      "id": 108
     }
   ],
   "users": [
@@ -37066,8 +37170,8 @@
       "name": "Absolute NOOB",
       "email": "absoluteNOOB@basketball.basketball",
       "username": "absoluteNOOB",
-      "wins": 204,
-      "losses": 10000000000119
+      "wins": 215,
+      "losses": 10000000000122
     },
     {
       "id": 3,
@@ -37097,8 +37201,8 @@
       "email": "colin@me.com",
       "fullName": "Colin",
       "username": "Cmoney",
-      "wins": 109,
-      "losses": 67,
+      "wins": 134,
+      "losses": 73,
       "id": 6
     },
     {
@@ -37168,16 +37272,16 @@
     {
       "email": "HT@me.com",
       "fullName": "Hannah Thompson",
-      "wins": 46,
-      "losses": 18,
+      "wins": 57,
+      "losses": 23,
       "username": "HanBananBeanTeamForReezySheezyForReezySheezy",
       "id": 15
     },
     {
       "email": "tommy@generationwv.com",
       "fullName": "Tommy Spurlock",
-      "wins": 32,
-      "losses": 24,
+      "wins": 42,
+      "losses": 28,
       "username": "TommyTheCodingSwamiFRFR",
       "id": 16
     },

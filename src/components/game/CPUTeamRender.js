@@ -156,9 +156,10 @@ export const CPUTeamRender = ({ userPoints }) => {
             if (cpuTeamStats.length > 1) {
                 let dateStringCopy = dateString
                 dateString = dateStringCopy.slice(0, 10)
-                return <p className="player-stats"><em>{dateString}</em>
+                let [year, month, date] = dateString.split("-")
+                return <p className="player-stats"><em className="date">{month}/{date}/{year}</em>
                 <br/ >
-                <strong>{foundPlayer?.pts} Points</strong></p>}
+                <strong className="points">{foundPlayer?.pts} Points</strong></p>}
     
             }
 
@@ -198,9 +199,9 @@ export const CPUTeamRender = ({ userPoints }) => {
     return <>
     <div className="cpu-player-container">
         <div className="cpu-btn-container">
-    <button className="cpuStats btn btn-primary btn-lg" onClick={statFinder}>THEN GET YOUR OPPONENT'S SCORES</button>
+    <button type="button" className="cpuStats btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModalCenter" onClick={statFinder}>THEN GET YOUR OPPONENT'S SCORES</button>
         </div>
-        <h6>CPU TEAM</h6>
+        <h4>CPU TEAM</h4>
     {   
         cpuTeam.map((player) => <>
         {calculateScore(player)}

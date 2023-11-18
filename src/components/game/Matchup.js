@@ -104,10 +104,11 @@ export const Matchup = () => {
             if (userStats.length > 1) {
                 let dateStringCopy = dateString
                 dateString = dateStringCopy.slice(0, 10)
+                let [year, month, date] = dateString.split("-")
                 totalPoints += parseInt(foundPlayer?.pts)
-                return <p className="player-stats"><em>{dateString}</em>
+                return <p className="player-stats"><em className="date">{month}/{date}/{year}</em>
                 <br/ >
-                <strong>{foundPlayer?.pts} Points</strong></p>}
+                <strong className="points">{foundPlayer?.pts} Points</strong></p>}
     }
 
     return <>
@@ -116,7 +117,7 @@ export const Matchup = () => {
         <div className="btn-container">
             <button className="userStats btn btn-primary btn-lg" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>
         </div>
-        <h6>YOUR TEAM</h6>
+        <h4>YOUR TEAM</h4>
     {
         team.map((baller) => {
             return <>
