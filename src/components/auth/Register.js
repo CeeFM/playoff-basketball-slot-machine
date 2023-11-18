@@ -8,7 +8,8 @@ export const Register = (props) => {
         fullName: "",
         wins: 0,
         losses: 0,
-        username: ""
+        username: "",
+        teamName: ""
     })
     let navigate = useNavigate()
 
@@ -76,6 +77,12 @@ export const Register = (props) => {
                     <input onChange={updateCustomer}
                         type="email" id="email" className="form-control"
                         placeholder="Email address" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="teamName">Team Name</label>
+                    <input onChange={updateCustomer}
+                        type="text" id="teamName" className="form-control"
+                        placeholder="Make up a name for your team" required />
                 </fieldset>
                 <fieldset>
                     <button type="submit" className="btn btn-primary"> Register </button>

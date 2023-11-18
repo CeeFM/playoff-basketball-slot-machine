@@ -213,3 +213,21 @@ h2 {
   background-color: rgb(4, 140, 34);
   border:rgb(3, 107, 25) solid;
 }
+
+.form-control {
+  width: 40rem;
+  text-align: left;
+  position: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+
+.navbar__logout {
+  display: block;
+  margin: 0 auto;
+}
+
+.matchup-container {
+  margin-top: 5rem;
+}
