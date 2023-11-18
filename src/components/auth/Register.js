@@ -57,7 +57,7 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <img src="https://u.photofunia.com/1/results/B/R/BR9Kh7EJ8dUh7uFA5FpneA_r.jpg" />
+                <img className="title login-img" src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2016%2F12%2Fnba-jam-in-real-life-fire-basketball-video-0.jpg?w=960&cbr=1&q=90&fit=max" />
                 <h1 className="h3 mb-3 font-weight-normal">Please Register If You Wanna BALL OUT</h1>
                 <fieldset>
                     <label htmlFor="fullName"> Full Name </label>

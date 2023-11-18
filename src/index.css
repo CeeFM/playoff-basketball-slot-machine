@@ -111,7 +111,7 @@ text-align: center;
 .continue-btn-container {
   text-align: center;
   position: absolute;
-  left: 1rem;
+  left: 0;
   right: 0;
   top: 38rem;
   margin: 0 auto;
@@ -167,6 +167,10 @@ h2 {
   right: 15rem;
 }
 
+.login-img {
+  margin-bottom: 1.5rem;
+}
+
 .player-pick-img {
   position: absolute;
 }
@@ -184,10 +188,15 @@ h2 {
 }
 
 .result-img {
-  height: 20rem;
+  height: 10rem;
   width: auto;
-  position: absolute;
-  left: 31.5rem;
+  margin: 0 auto;
+}
+
+.confirm-div {
+  position: relative;
+  margin: 1.5rem auto;
+  left: 0;
 }
 
 .draft-btn,
@@ -202,5 +211,5 @@ h2 {
 
 .draft-btn:hover {
   background-color: rgb(4, 140, 34);
-  border:rgb(3, 107, 25)
+  border:rgb(3, 107, 25) solid;
 }
