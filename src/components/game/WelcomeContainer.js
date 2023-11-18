@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react"
-import { Welcome } from "../game/Welcome"
 import { NavBar } from "../nav/NavBar"
-import { WelcomeBack } from "../game/WelcomeBack"
-import { WelcomeContainer } from "../game/WelcomeContainer"
+import { Welcome } from "./Welcome"
+import { WelcomeBack } from "./WelcomeBack"
 
-export const ApplicationViews = () => {
-
+export const WelcomeContainer = () => {
     const [users, setUsers] = useState([])
     const localBballUser = localStorage.getItem("bball_user")
     const bballUserObject = JSON.parse(localBballUser)
@@ -22,15 +20,16 @@ export const ApplicationViews = () => {
       []
     )
 
-    const getUsers = () => {
-      fetch(`http://localhost:8088/users`)
-      .then(r => r.json())
-      .then((userArray) => {
-        setUsers(userArray)
-      })
-    }
-
-  return  <>
-  <WelcomeContainer />
-  </>
-}
+    if (users[bballUserObject.id - 1]?.wins > 0 || users[bballUserObject.id - 1]?.wins > 0) {
+      return <>
+      <NavBar />
+      <WelcomeBack />
+      </>
+    } 
+      else {
+        return <>
+        <NavBar />
+        <Welcome />
+        </>
+      }
+  }
