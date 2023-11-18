@@ -1,3 +1,5 @@
+//Welcome Page Content - First Time Users (Returning User Welcome Page TBD)
+
 import { Link } from "react-router-dom"
 import logo from "../images/funnybball.jpg"
 
@@ -11,6 +13,6 @@ export const Welcome = () => {
     <em> C8 rules, every other cohort drools. It's ok, I'm just getting into the smack talk energy because of how FRIGGIN INTENSE this whole GAME IS</em>
     <br />
     <br />
-    <Link to="/draft"><button>I'm Ready To Pick My Team</button></Link>
+    <Link to="/draft"><button className="btn btn-primary">I'm Ready To Pick My Team</button></Link>
     </>
 }

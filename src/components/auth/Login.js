@@ -17,7 +17,6 @@ export const Login = () => {
                     const user = foundUsers[0]
                     localStorage.setItem("bball_user", JSON.stringify({
                         id: user.id,
-                        staff: user.isStaff
                     }))
 
                     navigate("/")
@@ -32,7 +31,7 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Playoff Basketball Slot Machine</h1>
+                    <img src="https://u.photofunia.com/1/results/B/R/BR9Kh7EJ8dUh7uFA5FpneA_r.jpg" />
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
@@ -44,14 +43,14 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button type="submit" className="btn btn-primary">
                             Sign in
                         </button>
                     </fieldset>
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+                <Link to="/register"><button className="btn btn-primary register">Not a member yet?</button></Link>
             </section>
         </main>
     )

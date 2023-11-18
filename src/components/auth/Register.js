@@ -5,7 +5,10 @@ import "./Login.css"
 export const Register = (props) => {
     const [customer, setCustomer] = useState({
         email: "",
-        fullName: ""
+        fullName: "",
+        wins: 0,
+        losses: 0,
+        username: ""
     })
     let navigate = useNavigate()
 
@@ -54,6 +57,7 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
+                <img src="https://u.photofunia.com/1/results/B/R/BR9Kh7EJ8dUh7uFA5FpneA_r.jpg" />
                 <h1 className="h3 mb-3 font-weight-normal">Please Register If You Wanna BALL OUT</h1>
                 <fieldset>
                     <label htmlFor="fullName"> Full Name </label>
@@ -62,13 +66,19 @@ export const Register = (props) => {
                            placeholder="Enter your name" required autoFocus />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="username"> Username </label>
+                    <input onChange={updateCustomer}
+                           type="text" id="username" className="form-control"
+                           placeholder="Enter a username" required autoFocus />
+                </fieldset>
+                <fieldset>
                     <label htmlFor="email"> Email address </label>
                     <input onChange={updateCustomer}
                         type="email" id="email" className="form-control"
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Register </button>
+                    <button type="submit" className="btn btn-primary"> Register </button>
                 </fieldset>
             </form>
         </main>
