@@ -175,7 +175,7 @@ export const CPUTeamRender = ({ userPoints }) => {
             })
                 .then(response => response.json())
                 .then(data => console.log(data))
-            return <h2>BIG L</h2>
+            return <><img className="result-img" src="https://u.photofunia.com/1/results/0/Q/0QLmaQGOOIpDrhVDteGtlA_r.jpg" /></>
         }
 
         else if (userPoints > totalPoints) {
@@ -189,9 +189,9 @@ export const CPUTeamRender = ({ userPoints }) => {
             })
                 .then(response => response.json())
                 .then(data => console.log(data))
-            return <h2>BIG W</h2>
+            return <><img className="result-img" src="https://u.photofunia.com/1/results/i/T/iTTUeRT95UgAnZYEqvSamw_r.jpg" /></>
         } else if (userPoints === totalPoints) {
-            return <p>TIE - NO POINTS</p>
+            return <p>TIE</p>
         } else {
             return ""
     }

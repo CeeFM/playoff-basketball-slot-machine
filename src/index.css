@@ -111,7 +111,7 @@ text-align: center;
 .continue-btn-container {
   text-align: center;
   position: absolute;
-  left: 0;
+  left: 3rem;
   right: 0;
   top: 38rem;
   margin: 0 auto;
@@ -179,4 +179,11 @@ text-align: center;
 
 .date {
   font-size: .75rem;
+}
+
+.result-img {
+  height: 20rem;
+  width: auto;
+  position: absolute;
+  left: 32.5rem;
 }
