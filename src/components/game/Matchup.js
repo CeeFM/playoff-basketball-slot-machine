@@ -7,7 +7,10 @@ export const Matchup = () => {
     const [userStats, setUserStats] = useState([])
     const [match, setMatch] = useState([])
     const [game, setGame] = useState([])
+    const [users, setUsers] = useState([])
     const team = userTeam.filter((player) => player.matchId === match.length)
+    const localBballUser = localStorage.getItem("bball_user")
+    const bballUserObject = JSON.parse(localBballUser)
 
     useEffect(
         () => {
@@ -31,6 +34,17 @@ export const Matchup = () => {
             },
             []
             ) 
+
+            useEffect(
+                () => {
+                    fetch('http://localhost:8088/users/')
+                        .then(response => response.json())
+                        .then((userArray) => {
+                            setUsers(userArray)
+                        })
+                },
+                []
+                ) 
     
         const getMatch = () => {
             fetch('http://localhost:8088/match')
@@ -112,12 +126,12 @@ export const Matchup = () => {
     }
 
     return <>
-        <NavBar />
-    <div className="player-container container">
+
+    <div className="player-container container matchup-container">
         <div className="btn-container">
             <button className="userStats btn btn-primary btn-lg" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>
         </div>
-        <h4>YOUR TEAM</h4>
+        <h4><strong>{users[bballUserObject.id - 1]?.teamName}</strong></h4>
     {
         team.map((baller) => {
             return <>

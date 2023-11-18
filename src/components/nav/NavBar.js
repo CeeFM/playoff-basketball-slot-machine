@@ -13,7 +13,7 @@ export const NavBar = () => {
                 <Link className="navbar__link" to="/" onClick={() => {
                     localStorage.removeItem("bball_user")
                     navigate("/login", {replace: true})
-                }}><button className="btn btn-primary">Logout</button></Link>
+                }}><button className="btn btn-primary logout-btn">Logout</button></Link>
             </li>
             : ""
     }
