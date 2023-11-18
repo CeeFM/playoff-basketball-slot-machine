@@ -36698,6 +36698,119 @@
       "matchId": 111,
       "id": 560,
       "swap": true
+    },
+    {
+      "playerId": 119,
+      "matchId": 112,
+      "id": 561
+    },
+    {
+      "playerId": 123,
+      "matchId": 112,
+      "id": 562
+    },
+    {
+      "playerId": 46,
+      "matchId": 112,
+      "id": 563
+    },
+    {
+      "playerId": 122,
+      "matchId": 112,
+      "id": 564
+    },
+    {
+      "playerId": 1,
+      "matchId": 112,
+      "id": 565,
+      "swap": true
+    },
+    {
+      "playerId": 77,
+      "matchId": 113,
+      "id": 566,
+      "swap": true
+    },
+    {
+      "playerId": 6,
+      "matchId": 113,
+      "id": 567,
+      "swap": true
+    },
+    {
+      "playerId": 34,
+      "matchId": 113,
+      "id": 568,
+      "swap": true
+    },
+    {
+      "playerId": 18,
+      "matchId": 113,
+      "id": 569,
+      "swap": true
+    },
+    {
+      "playerId": 14,
+      "matchId": 113,
+      "id": 570,
+      "swap": true
+    },
+    {
+      "playerId": 96,
+      "matchId": 114,
+      "id": 571,
+      "swap": true
+    },
+    {
+      "playerId": 103,
+      "matchId": 114,
+      "id": 572,
+      "swap": true
+    },
+    {
+      "playerId": 21,
+      "matchId": 114,
+      "id": 573,
+      "swap": true
+    },
+    {
+      "playerId": 63,
+      "matchId": 114,
+      "id": 574,
+      "swap": true
+    },
+    {
+      "playerId": 65,
+      "matchId": 114,
+      "id": 575,
+      "swap": true
+    },
+    {
+      "playerId": 132,
+      "matchId": 115,
+      "id": 576
+    },
+    {
+      "playerId": 128,
+      "matchId": 115,
+      "id": 577
+    },
+    {
+      "playerId": 70,
+      "matchId": 115,
+      "id": 578,
+      "swap": true
+    },
+    {
+      "playerId": 92,
+      "matchId": 115,
+      "id": 579
+    },
+    {
+      "playerId": 56,
+      "matchId": 115,
+      "id": 580,
+      "swap": true
     }
   ],
   "match": [
@@ -37255,6 +37368,26 @@
       "userId": 18,
       "matchId": 111,
       "id": 111
+    },
+    {
+      "userId": 10,
+      "matchId": 112,
+      "id": 112
+    },
+    {
+      "userId": 15,
+      "matchId": 113,
+      "id": 113
+    },
+    {
+      "userId": 15,
+      "matchId": 114,
+      "id": 114
+    },
+    {
+      "userId": 21,
+      "matchId": 115,
+      "id": 115
     }
   ],
   "users": [
@@ -37333,8 +37466,8 @@
     {
       "email": "colintesting@me.com",
       "fullName": "Testing Colin Testing",
-      "wins": 12,
-      "losses": 12,
+      "wins": 27,
+      "losses": 15,
       "username": "colintesting",
       "id": 10
     },
@@ -37373,8 +37506,8 @@
     {
       "email": "HT@me.com",
       "fullName": "Hannah Thompson",
-      "wins": 57,
-      "losses": 23,
+      "wins": 65,
+      "losses": 41,
       "username": "HanBananBeanTeamForReezySheezyForReezySheezy",
       "id": 15
     },
@@ -37397,7 +37530,7 @@
     {
       "email": "barry@generationwv.com",
       "fullName": "Barry Griffith",
-      "wins": 60,
+      "wins": 62,
       "losses": 41,
       "username": "TheKid",
       "id": 18
@@ -37421,8 +37554,8 @@
     {
       "email": "freaknasty@me.com",
       "fullName": "FreakNasty",
-      "wins": 16,
-      "losses": 6,
+      "wins": 23,
+      "losses": 10,
       "username": "FreakNasty",
       "id": 21
     }

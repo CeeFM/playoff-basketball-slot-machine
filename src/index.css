@@ -111,7 +111,7 @@ text-align: center;
 .continue-btn-container {
   text-align: center;
   position: absolute;
-  left: 3rem;
+  left: 1rem;
   right: 0;
   top: 38rem;
   margin: 0 auto;
@@ -128,7 +128,9 @@ text-align: center;
   color: black;
   font-size: 10rem;
 }
-
+h2 {
+  font-weight: bold;
+}
 .btn,
 .btn-primary {
   background-color: #CF5C36;
@@ -185,5 +187,20 @@ text-align: center;
   height: 20rem;
   width: auto;
   position: absolute;
-  left: 32.5rem;
+  left: 31.5rem;
+}
+
+.draft-btn,
+.remove-btn {
+  width: 25rem;
+}
+
+.draft-btn {
+  background-color: rgb(2, 94, 22);
+  border: rgb(2, 94, 22) solid;
+}
+
+.draft-btn:hover {
+  background-color: rgb(4, 140, 34);
+  border:rgb(3, 107, 25)
 }
