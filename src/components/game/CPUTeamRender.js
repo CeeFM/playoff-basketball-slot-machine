@@ -175,7 +175,7 @@ export const CPUTeamRender = ({ userPoints }) => {
             })
                 .then(response => response.json())
                 .then(data => console.log(data))
-            return <><img className="result-img" src="https://u.photofunia.com/1/results/0/Q/0QLmaQGOOIpDrhVDteGtlA_r.jpg" /></>
+            return <><img className="result-img" src="https://www.casinopapa.co.uk/wp-content/uploads/2017/09/get-over.png" /></>
         }
 
         else if (userPoints > totalPoints) {
@@ -189,7 +189,7 @@ export const CPUTeamRender = ({ userPoints }) => {
             })
                 .then(response => response.json())
                 .then(data => console.log(data))
-            return <><img className="result-img" src="https://u.photofunia.com/1/results/i/T/iTTUeRT95UgAnZYEqvSamw_r.jpg" /></>
+            return <><img className="result-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/593d544b-4815-4bbf-889f-773a0584c6ed/dcb2gic-8a431ea4-3ef3-426e-b6ff-dc925ca9ab06.jpg/v1/fill/w_1383,h_578,q_70,strp/bigwin_png_by_annguyen1089_dcb2gic-pre.jpg" /></>
         } else if (userPoints === totalPoints) {
             return <p>TIE</p>
         } else {
@@ -214,6 +214,6 @@ export const CPUTeamRender = ({ userPoints }) => {
     <div className="winorloss container-fluid">
     {bigW()}
     </div>
-    <Link to="/swap"><div className="continue-btn-container"><button className="continue-btn btn btn-primary btn-lg">CONTINUE</button></div></Link>
+    <div className="continue-btn-container"><Link to="/swap"><button className="continue-btn btn btn-primary btn-lg">CONTINUE</button></Link></div>
     </>
 }
