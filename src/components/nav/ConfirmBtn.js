@@ -33,7 +33,9 @@ export const ConfirmBtn = () => {
                 // TODO: Create the object to be saved to the API
                 const playerToSendToAPI = {
                     userId: bballUserObject.id,
-                    matchId: match.length + 1
+                    matchId: match.length + 1,
+                    wins: 0,
+                    losses: 0
                 }
 
                 fetch(`http://localhost:8088/match`, {

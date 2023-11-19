@@ -9,6 +9,7 @@ export const CPUTeamRender = ({ userPoints }) => {
     const [cpuTeamStats, setCpuTeamStats] = useState([])
     const localBballUser = localStorage.getItem("bball_user")
     const [users, setUsers] = useState([])
+    const [match, setMatch] = useState([])
     const bballUserObject = JSON.parse(localBballUser)
 
 
@@ -41,6 +42,19 @@ export const CPUTeamRender = ({ userPoints }) => {
             ,
             []
             ) 
+
+            useEffect(
+                () => {
+                        fetch(`http://localhost:8088/match`)
+                            .then(response => response.json())
+                            .then((matchArray) => {
+                                setMatch(matchArray)
+                            })
+                    }
+                    
+                ,
+                []
+                ) 
 
         useEffect(
             () => {
@@ -157,7 +171,10 @@ export const CPUTeamRender = ({ userPoints }) => {
                 let dateStringCopy = dateString
                 dateString = dateStringCopy.slice(0, 10)
                 let [year, month, date] = dateString.split("-")
-                return <p className="player-stats"><em className="date">{month}/{date}/{year}</em>
+                return <p className="player-stats"><em className="date">{foundPlayer?.team?.full_name}
+                <br />
+                {month}/{date}/{year}
+                </em>
                 <br/ >
                 <strong className="points">{foundPlayer?.pts} Points</strong></p>}
     
