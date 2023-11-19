@@ -135,6 +135,7 @@ h2 {
 .btn-primary {
   background-color: #CF5C36;
   border: #CF5C36 solid;
+  font-weight: bold;
 }
 
 .btn:hover,
@@ -215,8 +216,10 @@ h2 {
 }
 
 .form-control {
-  width: 40rem;
-  text-align: left;
+  width: 30rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: 2px black solid;
   position: block;
   margin: 0 auto;
   margin-bottom: 2rem;
@@ -230,4 +233,16 @@ h2 {
 
 .matchup-container {
   margin-top: 5rem;
+}
+
+.placeholder {
+  margin-top: 2.5rem;
+}
+
+.continue-btn {
+  margin-top: 1.5rem;
+}
+
+.swap-container {
+  margin-top: 3rem;
 }
