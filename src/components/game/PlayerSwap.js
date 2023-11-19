@@ -70,7 +70,7 @@ export const PlayerSwap = () => {
          
     return <>
             <NavBar />
-    <div className="player-container container">
+    <div className="player-container container swap-container">
         <h4>SWAP A PLAYER ON YOUR TEAM (YOU CAN ONLY DO THIS ONCE), 
             <br/>OR KEEP THE SAME TEAM AND START ANOTHER BATTLE</h4>
     {
@@ -93,7 +93,7 @@ export const PlayerSwap = () => {
         })
         
     }
-    <Link to="/matchup"><div><button className="btn btn-primary btn-lg">CONTINUE</button></div></Link>
+    <Link to="/matchup"><div><button className="btn btn-primary btn-lg continue-btn">CONTINUE</button></div></Link>
     </div>
 
     </>

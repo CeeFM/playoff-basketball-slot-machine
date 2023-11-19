@@ -163,7 +163,7 @@ export const PlayerPick = () => {
     {
         team.length % 5 === 0 && team.length > 0
         ? <ConfirmBtn />
-        : <NavBar />
+        : <p className="placeholder"></p>
     }
     <div className="player-container container">
     {
