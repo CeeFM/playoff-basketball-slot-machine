@@ -148,7 +148,7 @@ export const PlayerPick = () => {
             const removeDiv = document.querySelector(`.remove-btn-${parseInt(id)}`)
             const removePlayer = team.filter((baller) => baller.playerId === parseInt(id))
             console.log(removePlayer)
-            fetch(`http://localhost:8088/userTeam/${removePlayer[0].id}`, {
+            fetch(`http://localhost:8088/userTeam/${removePlayer[0]?.id}`, {
                     method: "DELETE"
                 })
                 .then(() => {

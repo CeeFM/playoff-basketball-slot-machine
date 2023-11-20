@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { PlayerSwap } from "./PlayerSwap"
-import { WinLoss } from "./WinLoss"
+import { Win } from "./Win"
+import { Loss } from "./Loss"
 
 export const MatchEndContainer = () => {
     const localBballUser = localStorage.getItem("bball_user")
@@ -31,9 +32,12 @@ export const MatchEndContainer = () => {
             ) 
 
 
-    if (match[match.length - 1]?.wins === 10 || match[match.length - 1]?.losses === 10) {
-        return <WinLoss />
-    } else { 
+    if (match[match.length - 1]?.wins === 10) {
+        return <Win />
+    } else if (match[match.length - 1]?.losses === 10) {
+        return <Loss />
+    }
+     else { 
     
     return <PlayerSwap />
     }
