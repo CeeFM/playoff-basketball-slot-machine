@@ -37,6 +37,17 @@ export const Matchup = () => {
 
             useEffect(
                 () => {
+                    fetch('http://localhost:8088/match')
+                        .then(response => response.json())
+                        .then((matchArray) => {
+                            setMatch(matchArray)
+                        })
+                },
+                []
+                ) 
+
+            useEffect(
+                () => {
                     fetch('http://localhost:8088/users/')
                         .then(response => response.json())
                         .then((userArray) => {
@@ -120,13 +131,21 @@ export const Matchup = () => {
                 dateString = dateStringCopy.slice(0, 10)
                 let [year, month, date] = dateString.split("-")
                 totalPoints += parseInt(foundPlayer?.pts)
-                return <p className="player-stats"><em className="date">{month}/{date}/{year}</em>
-                <br/ >
+                return <p className="player-stats"><em className="date">{foundPlayer?.team?.full_name}
+                <br />
+                {month}/{date}/{year}
+                </em>
+                <br />
                 <strong className="points">{foundPlayer?.pts} Points</strong></p>}
     }
 
-    return <>
 
+    const windowReload = () => {
+        window.location.reload()
+    }
+    return <>
+    {getMatch}
+    {windowReload}
     <div className="player-container container matchup-container">
         <div className="btn-container">
             <button className="userStats btn btn-primary btn-lg" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>
