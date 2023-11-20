@@ -223,7 +223,7 @@ export const CPUTeamRender = ({ userPoints }) => {
         } else if (userPoints === totalPoints) {
             return <p>TIE</p>
         } else {
-            return <div className="the-score"><p> YOU: {match[match.length - 1]?.wins} - CPU: {match[match.length - 1]?.losses}</p></div>
+            return ""
     }
     }
 
