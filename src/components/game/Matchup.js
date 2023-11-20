@@ -37,6 +37,17 @@ export const Matchup = () => {
 
             useEffect(
                 () => {
+                    fetch('http://localhost:8088/match')
+                        .then(response => response.json())
+                        .then((matchArray) => {
+                            setMatch(matchArray)
+                        })
+                },
+                []
+                ) 
+
+            useEffect(
+                () => {
                     fetch('http://localhost:8088/users/')
                         .then(response => response.json())
                         .then((userArray) => {
@@ -128,8 +139,13 @@ export const Matchup = () => {
                 <strong className="points">{foundPlayer?.pts} Points</strong></p>}
     }
 
-    return <>
 
+    const windowReload = () => {
+        window.location.reload()
+    }
+    return <>
+    {getMatch}
+    {windowReload}
     <div className="player-container container matchup-container">
         <div className="btn-container">
             <button className="userStats btn btn-primary btn-lg" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>

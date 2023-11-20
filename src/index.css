@@ -244,5 +244,15 @@ h2 {
 }
 
 .swap-container {
-  margin-top: 3rem;
+  margin-top: 1rem;
+}
+
+.the-score {
+  font-size: 2rem;
+  background-color: #8b3e25;
+  border-radius: 2rem;
+  position: absolute;
+  top: -2rem;
+  left: 36rem;
+  width: 18rem;
 }

@@ -71,8 +71,9 @@ export const PlayerSwap = () => {
     return <>
             <NavBar />
     <div className="player-container container swap-container">
-        <h4>SWAP A PLAYER ON YOUR TEAM (YOU CAN ONLY DO THIS ONCE), 
-            <br/>OR KEEP THE SAME TEAM AND START ANOTHER BATTLE</h4>
+        <h2><strong>SWAP A PLAYER ON YOUR TEAM (YOU CAN ONLY DO THIS ONCE), 
+            <br/>OR KEEP THE SAME TEAM AND START ANOTHER BATTLE</strong></h2>
+
     {
         team.map((baller) => {
             return <>
