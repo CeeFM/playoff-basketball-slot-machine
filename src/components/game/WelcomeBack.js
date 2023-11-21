@@ -22,9 +22,9 @@ export const WelcomeBack = ({currentUser}) => {
 
     return <>
     <img src="https://i.pinimg.com/originals/d2/79/7f/d2797fcae4e378255471064decdda88b.gif"></img>
-    <h2>Hey there, {users[bballUserObject.id - 1]?.username}. Back so soon for more L's from the CPU? So eager to get absolutely crushed by a robot.</h2>
+    <h3>Hey there, {users[bballUserObject.id - 1]?.username}. Back so soon for more L's from the CPU? So eager to get absolutely crushed by a robot.</h3>
     <br />
-    <h4>{users[bballUserObject.id - 1]?.teamName}'s Record Against the CPU is {users[bballUserObject.id - 1]?.wins} wins and {users[bballUserObject.id - 1]?.losses} losses</h4>
+    <div className="userRecord">{users[bballUserObject.id - 1]?.teamName}'s Record Against the CPU is {users[bballUserObject.id - 1]?.wins} wins and {users[bballUserObject.id - 1]?.losses} losses</div>
     <br />
     <h6>SERIOUSLY WHAT IS WRONG WITH YOU, THIS GAME IS BAD FOR YOUR BRAIN AND BODY. LET'S BE HONEST, THIS IS TORTURE.</h6>
     <br />

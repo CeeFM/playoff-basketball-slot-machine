@@ -167,9 +167,9 @@ export const CPUTeamRender = ({ userPoints }) => {
 
     const calculateScore = (baller) => {
         let foundPlayer = cpuTeamStats.find((stat) => stat?.player?.id === baller?.externalAPIId)
-        totalPoints += foundPlayer?.pts
-        }
-
+        let foundPlayerPts = foundPlayer?.pts
+        totalPoints += foundPlayerPts
+    }
     
     
 

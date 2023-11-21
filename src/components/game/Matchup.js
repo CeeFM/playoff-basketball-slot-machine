@@ -130,13 +130,19 @@ export const Matchup = () => {
                 let dateStringCopy = dateString
                 dateString = dateStringCopy.slice(0, 10)
                 let [year, month, date] = dateString.split("-")
-                totalPoints += parseInt(foundPlayer?.pts)
+                if (foundPlayer?.pts > 0){
+                    totalPoints += parseInt(foundPlayer?.pts)
+                }
                 return <p className="player-stats"><em className="date">{foundPlayer?.team?.full_name}
                 <br />
                 {month}/{date}/{year}
                 </em>
                 <br />
-                <strong className="points">{foundPlayer?.pts} Points</strong></p>}
+                <strong className="points">{
+                foundPlayer?.pts > 0 
+                    ? foundPlayer?.pts
+                    : "0"
+                } Points</strong></p>}
     }
 
 
