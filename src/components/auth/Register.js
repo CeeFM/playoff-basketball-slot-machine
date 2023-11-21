@@ -58,7 +58,7 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <img className="title login-img" src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2016%2F12%2Fnba-jam-in-real-life-fire-basketball-video-0.jpg?w=960&cbr=1&q=90&fit=max" />
+                <img className="login-img" src="https://media.tenor.com/fgJoyGz2O6EAAAAC/kevin-durant-come-here.gif" />
                 <h1 className="h3 mb-3 font-weight-normal">Please Register If You Wanna BALL OUT</h1>
                 <fieldset>
                     <label htmlFor="fullName"> Full Name </label>
@@ -85,7 +85,7 @@ export const Register = (props) => {
                         placeholder="Make up a name for your team" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit" className="btn btn-primary"> Register </button>
+                    <button type="submit" className="btn btn-primary btn-lg"> Register </button>
                 </fieldset>
             </form>
         </main>
