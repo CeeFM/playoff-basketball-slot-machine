@@ -277,8 +277,41 @@ h2 {
   margin: 0 5rem;
 }
 
+.userRecordL {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(171, 42, 42);
+  margin-top: 3rem;
+  line-height: 1rem;
+}
+
+.userRecordW {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(10, 63, 20);
+  margin-top: 3rem;
+  line-height: 1rem;
+}
+
 .userRecord {
   font-size: 2rem;
   font-weight: bold;
-  color: rgb(128, 60, 0);
+  color: rgb(10, 63, 20);
+  margin-bottom: 2rem;
+  line-height: 1rem;
+}
+
+.welcome-msg,
+.welcome-top {
+  margin: 0 3rem;
+  margin-top: 2rem;
+}
+
+.another-welcome {
+  margin: 1rem 5rem;
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1.50rem;
 }

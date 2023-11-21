@@ -22,7 +22,7 @@ export const WelcomeBack = ({currentUser}) => {
 
     return <>
     <img src="https://i.pinimg.com/originals/d2/79/7f/d2797fcae4e378255471064decdda88b.gif"></img>
-    <h3>Hey there, {users[bballUserObject.id - 1]?.username}. Back so soon for more L's from the CPU? So eager to get absolutely crushed by a robot.</h3>
+    <h3 className="welcome-msg">Hey there, {users[bballUserObject.id - 1]?.username}. Back so soon for more L's from the CPU?</h3>
     <br />
     <div className="userRecord">{users[bballUserObject.id - 1]?.teamName}'s Record Against the CPU is {users[bballUserObject.id - 1]?.wins} wins and {users[bballUserObject.id - 1]?.losses} losses</div>
     <br />

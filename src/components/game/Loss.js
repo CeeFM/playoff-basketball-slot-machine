@@ -41,7 +41,7 @@ export const Loss = () => {
     <NavBar />
     <h2>YOU LOST</h2>
     <img src={randomImage} />
-    <h4><strong>{users[bballUserObject.id - 1]?.teamName}</strong>'s Record Against the CPU is: <br /><br /><strong>{users[bballUserObject.id - 1]?.wins}</strong> wins and <strong>{users[bballUserObject.id - 1]?.losses}</strong> losses</h4>
+    <h4 className="userRecordL"><strong>{users[bballUserObject.id - 1]?.teamName}</strong>'s Record Against the CPU is: <br /><br /><strong>{users[bballUserObject.id - 1]?.wins}</strong> wins and <strong>{users[bballUserObject.id - 1]?.losses}</strong> losses</h4>
     <br /><br />
     <div className="random-phrase">{randomPhrase}</div>
     <div className="btn-container"><Link to="/draft"><button className="btn btn-primary restart-btn btn-lg">Let's goooooo againnnnnnn</button></Link></div>
