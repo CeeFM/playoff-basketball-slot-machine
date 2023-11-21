@@ -220,8 +220,6 @@ export const CPUTeamRender = ({ userPoints }) => {
             return <>
             <div className="the-score"><p> YOU: {match[match.length - 1]?.wins + 1} - CPU: {match[match.length - 1]?.losses}</p></div>
             <img className="result-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/593d544b-4815-4bbf-889f-773a0584c6ed/dcb2gic-8a431ea4-3ef3-426e-b6ff-dc925ca9ab06.jpg/v1/fill/w_1383,h_578,q_70,strp/bigwin_png_by_annguyen1089_dcb2gic-pre.jpg" /></>
-        } else if (userPoints === totalPoints) {
-            return <p>TIE</p>
         } else {
             return ""
     }
@@ -238,7 +236,7 @@ export const CPUTeamRender = ({ userPoints }) => {
         <div className="cpu-btn-container">
     <button type="button" className="cpuStats btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModalCenter" onClick={statFinder}>THEN GET YOUR OPPONENT'S SCORES</button>
         </div>
-        <h4>CPU TEAM</h4>
+        <h5>CPU TEAM</h5>
     {   
         cpuTeam.map((player) => <>
         {calculateScore(player)}
@@ -251,6 +249,10 @@ export const CPUTeamRender = ({ userPoints }) => {
     <div className="winorloss container-fluid">
     {bigW()}
     </div>
-    <div className="continue-btn-container"><Link to="/swap"><button className="continue-btn btn btn-primary btn-lg">CONTINUE</button></Link></div>
+    {   userPoints === totalPoints
+        ? <div className="continue-btn-container"><Link to="/swap"><button className="continue-btn btn btn-primary btn-lg">TIE GAME - TRY AGAIN</button></Link></div>
+        : <div className="continue-btn-container"><Link to="/swap"><button className="continue-btn btn btn-primary btn-lg">CONTINUE</button></Link></div>
+    }
+    
     </>
 }

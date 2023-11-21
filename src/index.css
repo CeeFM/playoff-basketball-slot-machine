@@ -8,6 +8,15 @@ body {
   background-color: #EFC88B;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Press Start 2P";
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -169,6 +178,7 @@ h2 {
 }
 
 .login-img {
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -244,7 +254,7 @@ h2 {
 }
 
 .swap-container {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .the-score {
@@ -259,4 +269,14 @@ h2 {
 
 .restart-btn {
   margin-top: 3rem;
+}
+
+.random-phrase {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 5rem;
+}
+
+h4{
+  margin-top: 1rem;
 }

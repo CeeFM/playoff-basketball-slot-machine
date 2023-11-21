@@ -54,7 +54,7 @@ export const MatchEndContainer = () => {
                  .then(data => console.log(data))
              }
 
-    if (match[match.length - 1]?.wins === 10) {
+    if (match[match.length - 1]?.wins === 4) {
         fetch(`http://localhost:8088/users/${bballUserObject.id}`, {
             method: 'PATCH',
             headers: {'Content-type': 'application/json'},
@@ -65,7 +65,7 @@ export const MatchEndContainer = () => {
         return <>
         <Win />
         </>
-    } else if (match[match.length - 1]?.losses === 10) {
+    } else if (match[match.length - 1]?.losses === 4) {
         fetch(`http://localhost:8088/users/${bballUserObject.id}`, {
             method: 'PATCH',
             headers: {'Content-type': 'application/json'},

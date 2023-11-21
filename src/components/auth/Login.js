@@ -32,7 +32,7 @@ export const Login = () => {
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1 className="title">PLAYOFF BASKETBALL SLOT MACHINE</h1>
-                    <img className="login-img" src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2016%2F12%2Fnba-jam-in-real-life-fire-basketball-video-0.jpg?w=960&cbr=1&q=90&fit=max" />
+                    <img className="login-img" src="https://media.tenor.com/X-p0PE-nVscAAAAd/seattle-supersonics-shawn-kemp.gif" />
                     <h2>Please sign in</h2>
                     <fieldset className="login-form">
                         <label htmlFor="inputEmail"> Email address </label>
