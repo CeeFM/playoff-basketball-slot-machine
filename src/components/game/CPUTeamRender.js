@@ -188,6 +188,15 @@ export const CPUTeamRender = ({ userPoints }) => {
                 <strong className="points">{foundPlayer?.pts} Points</strong></p>}
     
             }
+    
+            const winImages = ["https://media1.giphy.com/media/t3sZxY5zS5B0z5zMIz/giphy.gif?cid=ecf05e47p7r5g4unjlrxjs82rnnyhmq4hg0bib0yv9gpu7uu&ep=v1_gifs_search&rid=giphy.gif&ct=g", "https://media.tenor.com/W15V4QzQcvsAAAAd/winning-celebrate.gif", "https://leveleleven.com/wp-content/uploads/sites/2/2014/12/giphy-5.gif", "https://usagif.com/wp-content/uploads/funny-celebrate-12.gif", "https://chicagostylesports.com/wp-content/uploads/2016/02/Stephen-colbert-celebration-gif.gif", "https://nypost.com/wp-content/uploads/sites/2/2023/06/chrome-capture-2023-5-13-1-1.gif?w=1200", "https://media0.giphy.com/media/EHGl0TPOGxHhvWiata/200w.gif?cid=6c09b9529yaeyyk7n4feaklcv8o1hpz8awp8hqcgcifruwcr&ep=v1_gifs_search&rid=200w.gif&ct=g", "https://www.businessinsider.in/thumb/msid-21132537,width-700,height-525,imgsize-3376144/nate-robinson-screams-at-the-heavens.jpg", "https://cdn3.sbnation.com/imported_assets/2057873/LeBronStaresDownGSWCrowd.gif", "https://giffiles.alphacoders.com/219/219240.gif" ]
+            const lossImages = ["https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHY5YnRrc3RmMTdubW4zNGV6b3l2eWU3Zmx4bWUxYWNyb3I0aTFhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tuODzgsktwtsYtvqDX/giphy.gif", "https://media3.giphy.com/media/eJ4j2VnYOZU8qJU3Py/giphy.gif", "https://media.tenor.com/jV2GPp9jld8AAAAC/thinking-lost.gif", "https://media3.giphy.com/media/sEqfAygnULZbMrMdFh/giphy.gif", "https://media.tenor.com/WvotbqtvuRUAAAAC/reasonsimbroke-kramer.gif", "https://i0.wp.com/roomescapeartist.com/wp-content/uploads/2018/04/tenor.gif?ssl=1", "https://media.tenor.com/0pVViMWxwgoAAAAC/you-will-lose-mean.gif"]
+            const newRandomNumber = (num) => {
+                let ranNum = Math.floor((Math.random()) * (num))
+                return parseInt(ranNum)
+            }
+            let randomWinImage = winImages[newRandomNumber(winImages.length)]
+            let randomLossImage = lossImages[newRandomNumber(lossImages.length)]
 
     const bigW = () => {
         if (totalPoints > userPoints) {
@@ -203,7 +212,7 @@ export const CPUTeamRender = ({ userPoints }) => {
                 .then(data => console.log(data))
             return <>
             <div className="the-score"><p> YOU: {match[match.length - 1]?.wins} - CPU: {match[match.length - 1]?.losses + 1}</p></div>
-            <img className="result-img" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHY5YnRrc3RmMTdubW4zNGV6b3l2eWU3Zmx4bWUxYWNyb3I0aTFhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tuODzgsktwtsYtvqDX/giphy.gif" /></>
+            <img className="result-img" src={randomLossImage} /></>
         }
 
         else if (userPoints > totalPoints) {
@@ -219,7 +228,7 @@ export const CPUTeamRender = ({ userPoints }) => {
                 .then(data => console.log(data))
             return <>
             <div className="the-score"><p> YOU: {match[match.length - 1]?.wins + 1} - CPU: {match[match.length - 1]?.losses}</p></div>
-            <img className="result-img" src="https://media1.giphy.com/media/t3sZxY5zS5B0z5zMIz/giphy.gif?cid=ecf05e47p7r5g4unjlrxjs82rnnyhmq4hg0bib0yv9gpu7uu&ep=v1_gifs_search&rid=giphy.gif&ct=g" /></>
+            <img className="result-img" src={randomWinImage} /></>
         } else {
             return ""
     }
