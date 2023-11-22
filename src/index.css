@@ -277,6 +277,70 @@ h2 {
   margin: 0 5rem;
 }
 
-h4{
-  margin-top: 1rem;
+.userRecordL {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(171, 42, 42);
+  margin-top: 3rem;
+  line-height: 1rem;
 }
+
+.userRecordW {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(10, 63, 20);
+  margin-top: 3rem;
+  line-height: 1rem;
+}
+
+.userRecord {
+  font-size: 1rem;
+  font-family: "Press Start 2P";
+  font-weight: bold;
+  color: rgb(10, 63, 20);
+  margin-bottom: 2rem;
+  line-height: 1rem;
+}
+
+.welcome-msg,
+.welcome-top {
+  margin: 0 3rem;
+  margin-top: 2rem;
+}
+
+.another-welcome {
+  margin: 1rem 5rem;
+  font-size: 1rem;
+}
+
+h3,
+h2 {
+  font-size: 1.50rem;
+}
+
+h6 {
+  font-size: .75rem;
+  margin: 0.5rem 4rem;
+}
+
+.btn:active,
+.btn-primary:active {
+  background-color: rgb(104, 1, 1);
+}
+
+.form-container {
+  margin-top: 5rem;
+}
+
+.form-container img {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.invisible {
+  color: #EFC88B;
+}
+
+h5 {
+  font-size: 1rem;
+}  

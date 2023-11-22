@@ -5,12 +5,14 @@ import logo from "../images/funnybball.jpg"
 
 export const Welcome = () => {
     return <>
-    <img src={logo}></img>
-    <h2>GET READY, YOU'RE STEPPING INTO A FAST-PACED, HIGH STAKES, FANTASY BASKETBALL GAME</h2>
-    <h4>Oh what, you were expecting some walk in the park, relaxing, enjoyable experience? Privileged much? This game will literally ruin you. You should consider running as far away as possible, as fast as you possibly can. Before it eats you alive.</h4>
-    <div>Doesn't seem like you've been here before. We love basketball, and stats, and we're learning to love React. So we're combining all of them into this wildly specific and utterly ludicrous game, to showcase the front end skills learned and developed in the first half of the NewForce curriculum.</div>
+    
+    <img src="https://media1.giphy.com/media/3o6YglDndxKdCNw7q8/giphy.gif?cid=ecf05e47ind53kmcbw0d1l5kju0aj6a88t5yh6lzg1o0722g&ep=v1_gifs_search&rid=giphy.gif&ct=g"></img>
+    <h2 className="welcome-top">GET READY, YOU'RE STEPPING INTO A FAST-PACED, HIGH STAKES, FANTASY BASKETBALL GAME</h2>
     <br />
-    <em> C8 rules, every other cohort drools. It's ok, I'm just getting into the smack talk energy because of how FRIGGIN INTENSE this whole GAME IS</em>
+    <h5 className="another-welcome"><strong>Pick a team of 5 current and/or historic NBA players, and see if you can get more points than the CPU in a best of 7 series!</strong></h5>
+    <br />
+    <h6>Oh what, you were expecting some walk in the park, relaxing, enjoyable experience? Privileged much? This game will literally ruin you. You should consider running as far away as possible, as fast as you possibly can. Before it eats you alive.</h6>
+    <em> JK it's fun please play it. C'mon I worked really hard on this. Seriously. It takes like 5 mins.</em>
     <br />
     <br />
     <Link to="/draft"><button className="btn btn-primary btn-lg"><strong>I'm Ready To Pick My Team</strong></button></Link>

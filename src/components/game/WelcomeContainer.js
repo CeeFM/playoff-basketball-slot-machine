@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { NavBar } from "../nav/NavBar"
 import { Welcome } from "./Welcome"
 import { WelcomeBack } from "./WelcomeBack"
+import { Link } from "react-router-dom"
 
 export const WelcomeContainer = () => {
     const [users, setUsers] = useState([])

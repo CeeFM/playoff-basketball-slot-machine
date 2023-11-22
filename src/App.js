@@ -9,6 +9,7 @@ import { PlayerPick } from './components/game/PlayerPick';
 import { Matchup } from './components/game/Matchup';
 import { PlayerSwap } from './components/game/PlayerSwap';
 import { MatchEndContainer } from './components/game/MatchEndContainer';
+import { RenameTeam } from './components/game/RenameTeam';
 
 export const App = () => {
 	return <Routes>
@@ -26,5 +27,6 @@ export const App = () => {
     		<Route path="/draft" element={<PlayerPick />} />
 			<Route path="/matchup" element={<Matchup />} />
 			<Route path="/swap" element={<MatchEndContainer />} />
+			<Route path="/rename" element={<RenameTeam />} />
 	</Routes>
 }

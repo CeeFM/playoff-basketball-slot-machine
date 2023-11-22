@@ -167,9 +167,9 @@ export const CPUTeamRender = ({ userPoints }) => {
 
     const calculateScore = (baller) => {
         let foundPlayer = cpuTeamStats.find((stat) => stat?.player?.id === baller?.externalAPIId)
-        totalPoints += foundPlayer?.pts
-        }
-
+        let foundPlayerPts = foundPlayer?.pts
+        totalPoints += foundPlayerPts
+    }
     
     
 
@@ -203,7 +203,7 @@ export const CPUTeamRender = ({ userPoints }) => {
                 .then(data => console.log(data))
             return <>
             <div className="the-score"><p> YOU: {match[match.length - 1]?.wins} - CPU: {match[match.length - 1]?.losses + 1}</p></div>
-            <img className="result-img" src="https://www.casinopapa.co.uk/wp-content/uploads/2017/09/get-over.png" /></>
+            <img className="result-img" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHY5YnRrc3RmMTdubW4zNGV6b3l2eWU3Zmx4bWUxYWNyb3I0aTFhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tuODzgsktwtsYtvqDX/giphy.gif" /></>
         }
 
         else if (userPoints > totalPoints) {
@@ -219,7 +219,7 @@ export const CPUTeamRender = ({ userPoints }) => {
                 .then(data => console.log(data))
             return <>
             <div className="the-score"><p> YOU: {match[match.length - 1]?.wins + 1} - CPU: {match[match.length - 1]?.losses}</p></div>
-            <img className="result-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/593d544b-4815-4bbf-889f-773a0584c6ed/dcb2gic-8a431ea4-3ef3-426e-b6ff-dc925ca9ab06.jpg/v1/fill/w_1383,h_578,q_70,strp/bigwin_png_by_annguyen1089_dcb2gic-pre.jpg" /></>
+            <img className="result-img" src="https://media1.giphy.com/media/t3sZxY5zS5B0z5zMIz/giphy.gif?cid=ecf05e47p7r5g4unjlrxjs82rnnyhmq4hg0bib0yv9gpu7uu&ep=v1_gifs_search&rid=giphy.gif&ct=g" /></>
         } else {
             return ""
     }

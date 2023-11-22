@@ -17,3 +17,7 @@ img {
 .h3 {
     font-weight: bold;
 }
+
+h1 {
+    box-shadow: 5px 5px purple;
+}
