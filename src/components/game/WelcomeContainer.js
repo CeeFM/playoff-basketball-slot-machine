@@ -21,7 +21,7 @@ export const WelcomeContainer = () => {
       []
     )
 
-    if (users[bballUserObject.id - 1]?.wins > 0 || users[bballUserObject.id - 1]?.wins > 0) {
+    if (users[bballUserObject.id - 1]?.wins > 0 || users[bballUserObject.id - 1]?.losses > 0) {
       return <>
       <NavBar />
       <WelcomeBack />
