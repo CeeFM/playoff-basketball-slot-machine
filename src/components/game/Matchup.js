@@ -156,7 +156,7 @@ export const Matchup = () => {
         <div className="btn-container">
             <button className="userStats btn btn-primary btn-lg" onClick={statFinder}>FIRST, GENERATE YOUR TEAM'S SCORES</button>
         </div>
-        <h5><strong>{users[bballUserObject.id - 1]?.teamName}</strong></h5>
+        <h5 className="userTeamName"><strong>{users[bballUserObject.id - 1]?.teamName}</strong></h5>
     {
         team.map((baller) => {
             return <>

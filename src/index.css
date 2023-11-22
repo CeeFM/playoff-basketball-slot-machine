@@ -294,7 +294,8 @@ h2 {
 }
 
 .userRecord {
-  font-size: 2rem;
+  font-size: 1rem;
+  font-family: "Press Start 2P";
   font-weight: bold;
   color: rgb(10, 63, 20);
   margin-bottom: 2rem;
@@ -312,6 +313,34 @@ h2 {
   font-size: 1rem;
 }
 
-h3 {
+h3,
+h2 {
   font-size: 1.50rem;
 }
+
+h6 {
+  font-size: .75rem;
+  margin: 0.5rem 4rem;
+}
+
+.btn:active,
+.btn-primary:active {
+  background-color: rgb(104, 1, 1);
+}
+
+.form-container {
+  margin-top: 5rem;
+}
+
+.form-container img {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.invisible {
+  color: #EFC88B;
+}
+
+h5 {
+  font-size: 1rem;
+}  
