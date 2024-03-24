@@ -1,5 +1,5 @@
 # Playoff Basketball Slot Machine
-Finally, an uncomplicated fantasy basketball game!
+Finally, a quick and uncomplicated fantasy basketball game!
 
 Select five players and compete against the CPU's team by outscoring them with real stats from the NBA playoff records. Prepare to elevate your basketball fandom to new heights as you uncover hidden gems of NBA history, engage in pulse-pounding, best-of-seven showdowns, and immerse yourself in the ultimate fantasy basketball experience.
 
