@@ -129,63 +129,46 @@ export const CPUTeamRender = ({ userPoints }) => {
         getGames()
         getMatch()
         let i = 0
-        let url = "https://www.balldontlie.io/api/v1/stats?player_ids[]="
-        let playerurl = ``
-        let gameurl = ``
+        let playerGames = [];
         while (i < cpuTeam.length){
             let thisPlayerGames = game.filter((gm) => gm.playerId === cpuTeam[i]?.id)
             let thisRandomNumber = Math.floor((Math.random() * thisPlayerGames.length))
             let playerGame = thisPlayerGames[thisRandomNumber]
-                if (i === cpuTeam.length - 1){
-                playerurl += `${cpuTeam[i]?.externalAPIId}`
-                gameurl += `&game_ids[]=${playerGame?.externalAPIId}`
-            } 
-                else  {
-                playerurl += `${cpuTeam[i]?.externalAPIId}&player_ids[]=`
-                gameurl += `&game_ids[]=${playerGame?.externalAPIId}`  
-            }
+            playerGames.push(playerGame);
             i++
         }
-        url += playerurl + gameurl
-        console.log(url)
-        apiFetch(url)
+        console.log(playerGames);
+        setCpuTeamStats(playerGames);
+
         const cpuBtn = document.querySelector(".cpuStats")
         const continueBtn = document.querySelector(".continue-btn-container")
         cpuBtn.style.visibility = "hidden"
         continueBtn.style.display = "block"
     }
 
-    const apiFetch = (url) => {
-        fetch(`${url}`)
-            .then(response => response.json())
-            .then((statArray) => {
-                setCpuTeamStats(statArray?.data)
-        } )
-    }
-
     let totalPoints = 0;
 
     const calculateScore = (baller) => {
-        let foundPlayer = cpuTeamStats.find((stat) => stat?.player?.id === baller?.externalAPIId)
-        let foundPlayerPts = foundPlayer?.pts
+        let foundPlayer = cpuTeamStats.find((stat) => stat?.playerId === baller?.id)
+        let foundPlayerPts = foundPlayer?.points
         totalPoints += foundPlayerPts
     }
     
     
 
     const findPlayer = (baller) => {
-        let foundPlayer = cpuTeamStats.find((stat) => stat?.player?.id === baller?.externalAPIId)
-        let dateString = foundPlayer?.game?.date
+        let foundPlayer = cpuTeamStats.find((stat) => stat?.playerId === baller?.id)
+        let dateString = foundPlayer?.date
             if (cpuTeamStats.length > 1) {
                 let dateStringCopy = dateString
                 dateString = dateStringCopy.slice(0, 10)
                 let [year, month, date] = dateString.split("-")
-                return <p className="player-stats"><em className="date">{foundPlayer?.team?.full_name}
+                return <p className="player-stats"><em className="date">{foundPlayer?.teamName}
                 <br />
                 {month}/{date}/{year}
                 </em>
                 <br/ >
-                <strong className="points">{foundPlayer?.pts} Points</strong></p>}
+                <strong className="points">{foundPlayer?.points} Points</strong></p>}
     
             }
     

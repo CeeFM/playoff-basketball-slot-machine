@@ -83,27 +83,18 @@ export const Matchup = () => {
     
     const statFinder = () => {
         getUserTeam()
-        let i = 0
-        let url = "https://www.balldontlie.io/api/v1/stats?player_ids[]="
-        let playerurl = ``
-        let gameurl = ``
+        let i = 0;
+        let playerGames = [];
         while (i < team.length){
             let thisPlayerGames = game.filter((gm) => gm.playerId === team[i]?.player.id)
             let thisRandomNumber = Math.floor((Math.random() * thisPlayerGames.length))
             let playerGame = thisPlayerGames[thisRandomNumber]
-                if (i === team.length - 1){
-                playerurl += `${team[i]?.player?.externalAPIId}`
-                gameurl += `&game_ids[]=${playerGame?.externalAPIId}`
-            } 
-                else  {
-                playerurl += `${team[i]?.player?.externalAPIId}&player_ids[]=`
-                gameurl += `&game_ids[]=${playerGame?.externalAPIId}`  
-            }
+            playerGames.push(playerGame);
             i++
         }
-        url += playerurl + gameurl
-        console.log(url)
-        apiFetch(url)
+        console.log(playerGames);
+        setUserStats(playerGames);
+
         const userBtn = document.querySelector('.btn-container')
         const cpuDiv = document.querySelector(".cpu-player-container")
         //const imgDiv = document.querySelectorAll(".matchup-img")
@@ -112,35 +103,26 @@ export const Matchup = () => {
         //imgDiv.style.display = "none";
     }
 
-    const apiFetch = (url) => {
-        fetch(`${url}`)
-            .then(response => response.json())
-            .then((statArray) => {
-                setUserStats(statArray?.data)
-        } )
-            .then(getUserTeam)
-    }
-
     let totalPoints = 0;
 
     const findPlayer = (baller) => {
-        let foundPlayer = userStats.find((stat) => stat?.player?.id === baller?.player?.externalAPIId)
-        let dateString = foundPlayer?.game?.date
+        let foundPlayer = userStats.find((stat) => stat?.playerId === baller?.player?.id)
+        let dateString = foundPlayer?.date
             if (userStats.length > 1) {
                 let dateStringCopy = dateString
                 dateString = dateStringCopy.slice(0, 10)
                 let [year, month, date] = dateString.split("-")
-                if (foundPlayer?.pts > 0){
-                    totalPoints += parseInt(foundPlayer?.pts)
+                if (foundPlayer?.points > 0){
+                    totalPoints += parseInt(foundPlayer?.points)
                 }
-                return <p className="player-stats"><em className="date">{foundPlayer?.team?.full_name}
+                return <p className="player-stats"><em className="date">{foundPlayer?.teamName}
                 <br />
                 {month}/{date}/{year}
                 </em>
                 <br />
                 <strong className="points">{
-                foundPlayer?.pts > 0 
-                    ? foundPlayer?.pts
+                foundPlayer?.points > 0 
+                    ? foundPlayer?.points
                     : "0"
                 } Points</strong></p>}
     }
