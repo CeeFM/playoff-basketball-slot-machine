@@ -29,4 +29,4 @@ cd playoff-basketball-slot-machine
 Coming soon!
 
 ## Video Walkthrough
-Coming soon!
+https://www.loom.com/share/f747aefdc57845568db68d92d49dbf7d?sid=05924e44-4e21-4e0f-a59e-8a5a6dc94cf4
